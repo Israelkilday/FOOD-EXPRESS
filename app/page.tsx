@@ -1,5 +1,5 @@
 const Home = () => {
-  return <h1>Hello Tailwind!</h1>;
+  return <div className="mx-6 bg-red-500 py-5">Hello Tailwind!</div>;
 };
 
 export default Home;
