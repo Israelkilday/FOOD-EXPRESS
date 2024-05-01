@@ -5,8 +5,9 @@ const Home = () => {
   return (
     <>
       <Header />
-      <div className="px-5 py-6"></div>
-      <Search />
+      <div className="px-5 py-6">
+        <Search />
+      </div>
     </>
   );
 };
