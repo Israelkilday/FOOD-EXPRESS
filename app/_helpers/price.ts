@@ -11,7 +11,7 @@ export const cauculateProductTotalPrice = (product: Product): number => {
 };
 
 export const formatCurrency = (value: number): string => {
-  return `R$ ${Intl.NumberFormat("pt-BR", {
+  return `R$${Intl.NumberFormat("pt-BR", {
     currency: "BRL",
     maximumFractionDigits: 2,
   }).format(value)}`;
