@@ -47,7 +47,7 @@ const ProductDetails = ({
     });
 
   return (
-    <div className="py-5">
+    <div className="relative z-50 mt-[-1.5rem] rounded-tl-3xl rounded-tr-3xl bg-white py-5">
       {/* IMAGEM E NOME DO RESTAURANT */}
 
       <div className="flex items-center gap-[0.375rem] px-5">
@@ -90,7 +90,7 @@ const ProductDetails = ({
         </div>
 
         {/*  QUANTIDADE */}
-        <div className="item-center flex gap-3">
+        <div className="item-center flex justify-center gap-3 text-center">
           <Button
             size="icon"
             variant="ghost"
@@ -99,7 +99,9 @@ const ProductDetails = ({
           >
             <ChevronLeftIcon />
           </Button>
-          <span className="w-4">{quantity}</span>
+          <span className="flex w-4 items-center justify-center">
+            {quantity}
+          </span>
           <Button size="icon" onClick={handleIncreaseQuantityClick}>
             <ChevronRightIcon />
           </Button>
@@ -147,6 +149,10 @@ const ProductDetails = ({
       <div className="mt-6 space-y-3 px-5">
         <h3 className="font-semibold">Sobre</h3>
         <ProductList products={complementaryProducts} />
+      </div>
+
+      <div className="mt-6 px-5">
+        <Button className="w-full font-semibold">Adicionar à Sacola</Button>
       </div>
     </div>
   );
