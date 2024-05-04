@@ -5,7 +5,7 @@ import DisconutBadge from "@/app/_components/discount-badge";
 import ProductList from "@/app/_components/product-list";
 import { Button } from "@/app/_components/ui/button";
 import {
-  cauculateProductTotalPrice,
+  calculateProductTotalPrice,
   formatCurrency,
 } from "@/app/_helpers/price";
 import { Prisma } from "@prisma/client";
@@ -69,7 +69,7 @@ const ProductDetails = ({
         <div>
           <div className="flex items-center gap-2">
             <h2 className="text-xl font-semibold">
-              {formatCurrency(cauculateProductTotalPrice(product))}
+              {formatCurrency(calculateProductTotalPrice(product))}
             </h2>
             {product.discountPercentage > 0 && (
               <DisconutBadge product={product} />

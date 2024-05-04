@@ -2,7 +2,7 @@
 
 import { Prisma } from "@prisma/client";
 import Image from "next/image";
-import { cauculateProductTotalPrice, formatCurrency } from "../_helpers/price";
+import { calculateProductTotalPrice, formatCurrency } from "../_helpers/price";
 import { ArrowDownIcon } from "lucide-react";
 import Link from "next/link";
 
@@ -46,7 +46,7 @@ const ProductItem = ({ product }: ProductItemProps) => {
 
           <div className="flex items-center gap-1">
             <h3 className="font-semibold">
-              {formatCurrency(cauculateProductTotalPrice(product))}
+              {formatCurrency(calculateProductTotalPrice(product))}
             </h3>
 
             {product.discountPercentage > 0 && (
