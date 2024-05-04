@@ -32,7 +32,7 @@ const CategoriesPage = async ({ params: { id } }: CategoriesPageProps) => {
   }
 
   return (
-    <div>
+    <>
       <Header />
 
       <div className="px-5 py-6">
@@ -48,7 +48,7 @@ const CategoriesPage = async ({ params: { id } }: CategoriesPageProps) => {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
