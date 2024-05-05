@@ -2,7 +2,7 @@ import Header from "@/app/_components/header";
 import ProductItem from "@/app/_components/product-item";
 import { db } from "@/app/_lib/prisma";
 
-const RestauranRecommendedPage = async () => {
+const RecommendedProductsPage = async () => {
   const products = await db.product.findMany({
     where: {
       discountPercentage: {
@@ -41,4 +41,4 @@ const RestauranRecommendedPage = async () => {
   );
 };
 
-export default RestauranRecommendedPage;
+export default RecommendedProductsPage;

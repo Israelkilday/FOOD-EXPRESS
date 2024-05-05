@@ -2,7 +2,7 @@ import Header from "@/app/_components/header";
 import RestaurantItem from "@/app/_components/restaurant-item";
 import { db } from "@/app/_lib/prisma";
 
-const Recomenderestaurant = async () => {
+const RecommendedRestaurants = async () => {
   const restaurants = await db.restaurant.findMany({});
 
   return (
@@ -28,4 +28,4 @@ const Recomenderestaurant = async () => {
   );
 };
 
-export default Recomenderestaurant;
+export default RecommendedRestaurants;
