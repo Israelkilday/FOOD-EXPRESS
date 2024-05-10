@@ -4,7 +4,6 @@ import { calculateProductTotalPrice, formatCurrency } from "../_helpers/price";
 import { ChevronLeftIcon, ChevronRightIcon, TrashIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { useContext } from "react";
-// import { useState } from "react";
 
 interface CartContentItemProps {
   cartProduct: CartProduct;
@@ -23,7 +22,7 @@ const CartItem = ({ cartProduct }: CartContentItemProps) => {
   const handleIncreaseQuantityClick = () =>
     increaseProductQuantity(cartProduct.id);
 
-  const handleDeleteClick = () => removeProductFromCart(cartProduct.id);
+  const handleRemoveClick = () => removeProductFromCart(cartProduct.id);
 
   return (
     <div className="flex items-center justify-between">
@@ -58,7 +57,7 @@ const CartItem = ({ cartProduct }: CartContentItemProps) => {
           </div>
 
           {/* QUANTIDADE */}
-          <div className="flex items-center gap-3 text-center">
+          <div className="flex items-center text-center">
             <Button
               size="icon"
               variant="ghost"
@@ -69,7 +68,7 @@ const CartItem = ({ cartProduct }: CartContentItemProps) => {
                 onClick={handleDecreaseQuantityClick}
               />
             </Button>
-            <span className="block w-3 text-xs">{cartProduct.quantity}</span>
+            <span className="block w-8 text-xs">{cartProduct.quantity}</span>
             <Button size="icon" className="h-7 w-7">
               <ChevronRightIcon
                 size={16}
@@ -85,7 +84,7 @@ const CartItem = ({ cartProduct }: CartContentItemProps) => {
         size="icon"
         variant="ghost"
         className="h-8 w-8 border border-solid border-muted-foreground"
-        onClick={handleDeleteClick}
+        onClick={handleRemoveClick}
       >
         <TrashIcon size={18} />
       </Button>
