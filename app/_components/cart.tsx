@@ -14,14 +14,14 @@ const Cart = () => {
 
   return (
     <div className="flex h-full flex-col py-5">
-      <div className="flex-auto space-y-4">
-        {products.map((product) => (
-          <CartItem key={product.id} cartProduct={product} />
-        ))}
-      </div>
-
-      {products.length > 0 && (
+      {products.length > 0 ? (
         <>
+          <div className="flex-auto space-y-4">
+            {products.map((product) => (
+              <CartItem key={product.id} cartProduct={product} />
+            ))}
+          </div>
+
           {/* TOTAIS */}
           <div className="mt-6">
             <Card>
@@ -68,6 +68,8 @@ const Cart = () => {
           {/* FINALIZAR PEDIDO */}
           <Button className="mt-6 w-full">Finalizar Pedido</Button>
         </>
+      ) : (
+        <h2 className="text-left font-medium">Sua sacola está vazia</h2>
       )}
     </div>
   );
