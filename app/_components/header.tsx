@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { MenuIcon } from "lucide-react";
 import Link from "next/link";
+import { Sheet, SheetTrigger } from "./ui/sheet";
+// import { signIn, signOut, useSession } from "next-auth/react";
 
 const Header = () => {
   return (
@@ -17,13 +21,17 @@ const Header = () => {
         </Link>
       </div>
 
-      <Button
-        size="icon"
-        variant="outline"
-        className="border-none bg-transparent"
-      >
-        <MenuIcon />
-      </Button>
+      <Sheet>
+        <SheetTrigger>
+          <Button
+            size="icon"
+            variant="outline"
+            className="border-none bg-transparent"
+          >
+            <MenuIcon />
+          </Button>
+        </SheetTrigger>
+      </Sheet>
     </div>
   );
 };
