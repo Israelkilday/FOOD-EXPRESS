@@ -143,7 +143,6 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       include: {
         restaurant: {
           select: {
-            // deliveryFree: true;
             id: true;
             deliveryFree: true;
             deliveryTimeMinutes: true;
