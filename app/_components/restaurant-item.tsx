@@ -17,6 +17,8 @@ interface RestaurantItemProps {
   userFavoriteRestaurants: UserFavoriteRestaurant[];
 }
 
+console.log("teste");
+
 const RestaurantItem = ({
   restaurant,
   className,
