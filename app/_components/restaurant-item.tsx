@@ -12,7 +12,6 @@ import { toast } from "sonner";
 import { useSession } from "next-auth/react";
 
 interface RestaurantItemProps {
-  // userId?: string;
   restaurant: Restaurant;
   className?: string;
   userFavoriteRestaurants: UserFavoriteRestaurant[];
@@ -21,7 +20,6 @@ interface RestaurantItemProps {
 const RestaurantItem = ({
   restaurant,
   className,
-  // userId,
   userFavoriteRestaurants,
 }: RestaurantItemProps) => {
   const { data } = useSession();

@@ -40,7 +40,7 @@ const MyFavoriteRestaurants = async () => {
             ))
           ) : (
             <h3 className="font-medium">
-              Voçê ainda não marcou nenhum restaurant como favorito.
+              Voçê ainda não marcou nenhum restaurante como favorito.
             </h3>
           )}
         </div>
