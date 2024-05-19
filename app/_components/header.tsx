@@ -99,9 +99,12 @@ const Header = () => {
             <Button
               variant="ghost"
               className="font- w-full justify-start space-x-3 rounded-full text-sm"
+              asChild
             >
-              <HomeIcon size={16} />
-              <span className="block">Início</span>
+              <Link href="/">
+                <HomeIcon size={16} />
+                <span className="block">Início</span>
+              </Link>
             </Button>
 
             {data?.user && (
@@ -120,9 +123,12 @@ const Header = () => {
                 <Button
                   variant="ghost"
                   className="font- w-full justify-start space-x-3 rounded-full text-sm"
+                  asChild
                 >
-                  <HeartIcon size={16} />
-                  <span className="block">Retaurantes Favoritos</span>
+                  <Link href="/my-favorite-restaurants">
+                    <HeartIcon size={16} />
+                    <span className="block">Retaurantes Favoritos</span>
+                  </Link>
                 </Button>
               </>
             )}
