@@ -6,6 +6,7 @@ import { auhtOptions } from "../_lib/auth";
 
 const RestaurantsPages = async () => {
   const session = await getServerSession(auhtOptions);
+
   const userFavoriteRestaurants = await db.userFavoriteRestaurant.findMany({
     where: {
       userId: session?.user.id,
