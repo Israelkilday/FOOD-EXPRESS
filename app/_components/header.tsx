@@ -1,8 +1,9 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import { Button } from "./ui/button";
 import {
+  CircleUserRound,
   HeartIcon,
   HomeIcon,
   LogInIcon,
@@ -29,20 +30,52 @@ const Header = () => {
   const handleSignInClick = () => signIn();
 
   return (
-    <div className="flex justify-between px-5 pt-6">
-      <div className="relative h-[30px] w-[100px]">
-        <Link href="/">
-          <Image
-            src="/Logo.png"
-            alt="FSW Foods"
-            fill
-            className="object-cover"
-          />
-        </Link>
+    <header className="flex justify-between px-5 pt-6 md:px-24">
+      <div className="flex items-center gap-3">
+        <div className="">
+          <Link href="/">
+            <h2 className="mr-2 flex items-center justify-center rounded-full border border-solid border-primary px-3 py-1 font-shadows-into-light text-primary duration-150 hover:bg-primary hover:text-white lg:text-lg">
+              Food Express
+            </h2>
+
+            {/* <Image
+              src="/Logo.png"
+              alt="FSW Foods"
+              fill
+              className="object-cover"
+            /> */}
+          </Link>
+        </div>
+
+        {data?.user && (
+          <div className="hidden items-center lg:flex">
+            <Button
+              asChild
+              className="hidden justify-start bg-transparent hover:bg-transparent lg:flex"
+            >
+              <Link href="/my-favorite-restaurants">
+                <span className="text-[16px] text-slate-600 duration-100 hover:text-primary">
+                  Restaurantes Favoritos
+                </span>
+              </Link>
+            </Button>
+
+            <Button
+              asChild
+              className="hidden justify-start bg-transparent hover:bg-transparent lg:flex"
+            >
+              <Link href="/my-orders" className="md:text-lg">
+                <span className="text-[16px] text-slate-600 duration-100 hover:text-primary">
+                  Meus Pedidos
+                </span>
+              </Link>
+            </Button>
+          </div>
+        )}
       </div>
 
       <Sheet>
-        <SheetTrigger>
+        <SheetTrigger className="lg:hidden">
           <Button
             size="icon"
             variant="outline"
@@ -149,7 +182,38 @@ const Header = () => {
           )}
         </SheetContent>
       </Sheet>
-    </div>
+
+      {data?.user ? (
+        <div className="hidden items-center justify-between px-5 lg:flex lg:px-0">
+          <div className="flex items-center gap-3">
+            <Avatar>
+              <AvatarImage src={data.user?.image ?? ""} />
+            </Avatar>
+
+            <h2 className="mr-3 font-semibold text-slate-600 md:text-lg">
+              {data.user.name}
+            </h2>
+
+            <Button
+              variant="secondary"
+              size="icon"
+              className="hidden text-slate-600 lg:flex"
+            >
+              <LogOutIcon onClick={handleSignOutClick} />
+            </Button>
+          </div>
+        </div>
+      ) : (
+        <Button
+          onClick={handleSignInClick}
+          className="hidden  md:text-lg lg:flex"
+          variant="secondary"
+        >
+          <CircleUserRound className="mr-2 text-slate-600" size={24} />
+          <span className="text-slate-600">Login</span>
+        </Button>
+      )}
+    </header>
   );
 };
 
