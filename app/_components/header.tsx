@@ -10,6 +10,7 @@ import {
   LogOutIcon,
   MenuIcon,
   ScrollText,
+  Soup,
 } from "lucide-react";
 import Link from "next/link";
 import {
@@ -32,10 +33,12 @@ const Header = () => {
   return (
     <header className="flex justify-between px-5 pt-6 md:px-24">
       <div className="flex items-center gap-3">
-        <div className="">
+        <div>
           <Link href="/">
-            <h2 className="mr-2 flex items-center justify-center rounded-full border border-solid border-primary px-3 py-1 font-shadows-into-light text-primary duration-150 hover:bg-primary hover:text-white lg:text-lg">
-              Food Express
+            <h2 className="mr-2 flex items-center justify-center  font-shadows-into-light font-semibold text-primary duration-150 hover:text-primary/85 lg:text-xl">
+              Food
+              <Soup size={20} />
+              Express
             </h2>
 
             {/* <Image
