@@ -20,6 +20,7 @@ const config = {
     extend: {
       fontFamily: {
         "shadows-into-light": ["Shadows Into Light", "cursive"],
+        poppins: ["Poppins", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

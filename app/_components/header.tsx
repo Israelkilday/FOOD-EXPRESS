@@ -31,7 +31,7 @@ const Header = () => {
   const handleSignInClick = () => signIn();
 
   return (
-    <header className="flex justify-between px-5 pt-6 md:px-24">
+    <header className="flex justify-between px-5 pt-6 md:px-24 md:pb-5">
       <div className="flex items-center gap-3">
         <div>
           <Link href="/">

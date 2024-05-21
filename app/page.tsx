@@ -51,12 +51,26 @@ const Home = async () => {
   const { products, burguersCategory, pizzasCategory } = await fetch();
 
   return (
-    <>
+    <main>
       <Header />
 
-      <div className="px-5 py-6">
-        <Search />
-      </div>
+      <section className="items-center md:flex md:h-[400px] md:bg-primary md:px-24 lg:h-[500px]">
+        <div className="">
+          <div className="hidden md:block">
+            <h1 className="pb-4 font-poppins font-bold text-white md:text-5xl lg:text-6xl">
+              Está com Fome?
+            </h1>
+            <p className="pb-6 font-semibold text-white">
+              Com apenas alguns cliques, encntre refeições acessíveis perto de
+              você.
+            </p>
+          </div>
+
+          <div className="rounded-lg px-5 py-6 md:bg-white md:px-0">
+            <Search />
+          </div>
+        </div>
+      </section>
 
       <div className="px-5 pt-6">
         <CategoryList />
@@ -115,7 +129,7 @@ const Home = async () => {
         </div>
         <RestaurantList />
       </div>
-    </>
+    </main>
   );
 };
 
