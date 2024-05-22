@@ -55,14 +55,14 @@ const Home = async () => {
     <main>
       <Header />
 
-      <section className="items-center justify-between overflow-x-hidden md:flex md:h-[400px] md:bg-primary md:px-24 lg:h-[500px]">
+      <section className="items-center justify-between overflow-hidden md:flex md:h-[400px] md:bg-primary md:px-24 lg:h-[500px]">
         <div className="">
           <div className="hidden md:block">
             <h1 className="pb-4 font-poppins font-bold text-white md:text-4xl lg:text-6xl">
               Está com Fome?
             </h1>
             <p className="pb-6 text-sm font-semibold text-white lg:text-base">
-              Com apenas alguns cliques, encntre refeições acessíveis perto de
+              Com apenas alguns cliques, encontre refeições acessíveis perto de
               você.
             </p>
           </div>
@@ -74,16 +74,14 @@ const Home = async () => {
 
         <div className="hidden lg:flex">
           <Image
-            width={620}
+            width={780}
             height={0}
             src="/img-hero-section.png"
             alt="img-hero-section"
             style={{
-              position: "absolute",
-              bottom: "-10px",
-              right: "0",
               objectFit: "contain",
             }}
+            className="translate-x-24 translate-y-32"
           />
         </div>
       </section>
