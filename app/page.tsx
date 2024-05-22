@@ -86,11 +86,11 @@ const Home = async () => {
         </div>
       </section>
 
-      <div className="px-5 pt-6">
+      <div className="px-5 pt-6 md:px-24 lg:pt-8">
         <CategoryList />
       </div>
 
-      <div className="px-0 pt-6">
+      <div className="px-0 pt-6 md:hidden">
         <Link href={`/categories/${pizzasCategory?.id}/products`}>
           <Promobanner
             src="/promo-banner-01.png"
@@ -99,7 +99,7 @@ const Home = async () => {
         </Link>
       </div>
 
-      <div className="space-y-4 pt-6">
+      <div className="space-y-4 pt-6 lg:pt-8">
         <div className="flex items-center justify-between px-5">
           <h2 className="font-semibold">Pedidos Recomendados</h2>
 
