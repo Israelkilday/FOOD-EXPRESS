@@ -55,6 +55,7 @@ const RestaurantItem = ({
               className=" rounded-lg object-cover"
             />
           </Link>
+
           <div className="absolute left-2 top-2 flex items-center gap-[2px] rounded-full bg-primary px-2 py-[2px] text-white">
             <StarIcon size={12} className="fill-yellow-400 text-yellow-400" />
 

@@ -8,6 +8,7 @@ import { db } from "./_lib/prisma";
 import Promobanner from "./_components/promo-banner";
 import RestaurantList from "./_components/restaurant-list";
 import Link from "next/link";
+import Image from "next/image";
 
 const fetch = async () => {
   const getProducts = db.product.findMany({
@@ -54,13 +55,13 @@ const Home = async () => {
     <main>
       <Header />
 
-      <section className="items-center md:flex md:h-[400px] md:bg-primary md:px-24 lg:h-[500px]">
+      <section className="items-center justify-between overflow-x-hidden md:flex md:h-[400px] md:bg-primary md:px-24 lg:h-[500px]">
         <div className="">
           <div className="hidden md:block">
-            <h1 className="pb-4 font-poppins font-bold text-white md:text-5xl lg:text-6xl">
+            <h1 className="pb-4 font-poppins font-bold text-white md:text-4xl lg:text-6xl">
               Está com Fome?
             </h1>
-            <p className="pb-6 font-semibold text-white">
+            <p className="pb-6 text-sm font-semibold text-white lg:text-base">
               Com apenas alguns cliques, encntre refeições acessíveis perto de
               você.
             </p>
@@ -69,6 +70,21 @@ const Home = async () => {
           <div className="rounded-lg px-5 py-6 md:bg-white md:px-0">
             <Search />
           </div>
+        </div>
+
+        <div className="hidden lg:flex">
+          <Image
+            width={620}
+            height={0}
+            src="/img-hero-section.png"
+            alt="img-hero-section"
+            style={{
+              position: "absolute",
+              bottom: "-10px",
+              right: "0",
+              objectFit: "contain",
+            }}
+          />
         </div>
       </section>
 

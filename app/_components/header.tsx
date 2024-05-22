@@ -35,7 +35,7 @@ const Header = () => {
       <div className="flex items-center gap-3">
         <div>
           <Link href="/">
-            <h2 className="mr-2 flex items-center justify-center  font-shadows-into-light font-semibold text-primary duration-150 hover:text-primary/85 lg:text-xl">
+            <h2 className="mr-2 flex items-center justify-center  font-shadows-into-light text-lg font-semibold text-primary duration-150 hover:text-primary/85 lg:text-xl">
               Food
               <Soup size={20} />
               Express
