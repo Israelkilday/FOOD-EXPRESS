@@ -35,9 +35,9 @@ const Header = () => {
       <div className="flex items-center gap-3">
         <div>
           <Link href="/">
-            <h2 className="mr-2 flex items-center justify-center  font-shadows-into-light text-xl font-semibold text-primary duration-150 hover:text-primary/85 lg:text-xl">
+            <h2 className="mr-2 flex items-center justify-center  font-shadows-into-light text-xl font-semibold text-primary duration-150 hover:text-yellow-400 lg:text-2xl">
               Food
-              <Soup size={20} />
+              <Soup className="lg:size-7" size={20} />
               Express
             </h2>
 
@@ -209,7 +209,7 @@ const Header = () => {
       ) : (
         <Button
           onClick={handleSignInClick}
-          className="hidden  md:text-lg lg:flex"
+          className="hidden duration-150 hover:bg-yellow-400 md:text-lg lg:flex"
           variant="secondary"
         >
           <CircleUserRound className="mr-2 text-slate-600" size={24} />

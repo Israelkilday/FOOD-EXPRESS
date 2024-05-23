@@ -6,7 +6,7 @@ const Promobanner = (props: ImageProps) => {
     <Image
       width={0}
       height={0}
-      className="h-auto w-[1000px] object-contain"
+      className="h-auto w-[600px] object-contain"
       sizes="100%"
       quality={100}
       {...props}
