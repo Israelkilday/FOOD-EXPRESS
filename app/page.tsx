@@ -137,7 +137,7 @@ const Home = async () => {
       </div>
 
       <div className="space-y-4 py-6">
-        <div className="flex items-center justify-between px-5">
+        <div className="flex items-center justify-between px-5 md:px-24">
           <h2 className="font-semibold lg:text-lg">
             Restaurantes Recomendados
           </h2>

@@ -14,7 +14,7 @@ const RestaurantList = async () => {
   });
 
   return (
-    <div className="flex gap-4 overflow-x-scroll px-5 [&::-webkit-scrollbar]:hidden">
+    <div className="flex gap-4 overflow-x-scroll px-5 md:max-w-[675px] md:px-24 lg:max-w-[1250px] [&::-webkit-scrollbar]:hidden">
       {resturants.map((restaurant) => (
         <RestaurantItem
           key={restaurant.id}
