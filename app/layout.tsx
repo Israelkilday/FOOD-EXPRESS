@@ -4,6 +4,7 @@ import "./globals.css";
 import { CartProvider } from "./context/cart";
 import AuthProvider from "./_providers/auth";
 import { Toaster } from "@/app/_components/ui/sonner";
+import Footer from "./_components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <AuthProvider>
           <CartProvider>{children}</CartProvider>
+          <Footer />
         </AuthProvider>
 
         <Toaster />
