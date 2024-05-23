@@ -64,7 +64,7 @@ const ProductItem = ({ product, className }: ProductItemProps) => {
             )}
           </div>
 
-          <span className="block text-xs text-muted-foreground">
+          <span className="block text-xs text-muted-foreground lg:font-semibold ">
             {product.restaurant.name}
           </span>
         </div>

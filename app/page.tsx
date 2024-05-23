@@ -67,7 +67,7 @@ const Home = async () => {
             </p>
           </div>
 
-          <div className="rounded-lg px-5 py-6 md:bg-white md:px-0">
+          <div className="rounded-lg p-4 md:bg-white md:px-0">
             <Search />
           </div>
         </div>
@@ -86,7 +86,7 @@ const Home = async () => {
         </div>
       </section>
 
-      <div className="px-5 pt-6 md:px-24 lg:pt-8">
+      <div className="px-5 pt-4 md:px-24 lg:pt-7">
         <CategoryList />
       </div>
 
@@ -99,7 +99,7 @@ const Home = async () => {
         </Link>
       </div>
 
-      <div className="space-y-4 pt-6 lg:pt-8">
+      <div className="space-y-4 pt-6 lg:pt-7">
         <div className="flex items-center justify-between px-5 md:px-24">
           <h2 className="font-semibold lg:text-lg">Pedidos Recomendados</h2>
 
@@ -117,25 +117,37 @@ const Home = async () => {
         <ProductList products={products} />
       </div>
 
-      <div className="px-0 pt-6">
-        <Link href={`/categories/${burguersCategory?.id}/products`}>
+      <div className="min-w-full gap-3 px-5 pt-6 md:flex md:px-24">
+        <Link
+          href={`/categories/${burguersCategory?.id}/products`}
+          className="hidden md:flex"
+        >
           <Promobanner
-            src="/promo-banner-02.png"
-            alt="A partir de R$17,90 em lanches "
+            src="/promo_banner.svg"
+            alt="A partir de R$17,90 em lanches"
+          />
+        </Link>
+
+        <Link href={`/categories/${pizzasCategory?.id}/products`}>
+          <Promobanner
+            src="/promo_banner_2.svg"
+            alt="Até 30% de desconto em pizzas"
           />
         </Link>
       </div>
 
       <div className="space-y-4 py-6">
         <div className="flex items-center justify-between px-5">
-          <h2 className="font-semibold">Restaurantes Recomendados</h2>
+          <h2 className="font-semibold lg:text-lg">
+            Restaurantes Recomendados
+          </h2>
 
           <Button
             variant="ghost"
             className="h-fit p-0 text-primary hover:bg-transparent"
             asChild
           >
-            <Link href="/restaurants/recommended">
+            <Link href="/restaurants/recommended" className="lg:text-base">
               Ver Todos
               <ChevronRightIcon size={16} />
             </Link>
