@@ -100,15 +100,15 @@ const Home = async () => {
       </div>
 
       <div className="space-y-4 pt-6 lg:pt-8">
-        <div className="flex items-center justify-between px-5">
-          <h2 className="font-semibold">Pedidos Recomendados</h2>
+        <div className="flex items-center justify-between px-5 md:px-24">
+          <h2 className="font-semibold lg:text-lg">Pedidos Recomendados</h2>
 
           <Button
             variant="ghost"
             className="h-fit p-0 text-primary hover:bg-transparent"
             asChild
           >
-            <Link href="/products/recommended">
+            <Link href="/products/recommended" className="lg:text-base">
               Ver Todos
               <ChevronRightIcon size={16} />
             </Link>
