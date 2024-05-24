@@ -14,7 +14,7 @@ const scrollToTop = () => {
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col">
+    <footer className="flex flex-col pt-6 lg:pt-8">
       <div className="flex w-full flex-col justify-between bg-primary px-5 pb-5 pt-6 lg:flex-row lg:px-24 lg:pb-9 lg:pt-5">
         <div className="flex flex-col items-start justify-center gap-5 pb-1 md:justify-start lg:pt-5">
           <Link href="/">
@@ -49,17 +49,18 @@ const Footer = () => {
             <h3 className="text-white md:pl-5">DEPARTAMENTOS</h3>
             <div className="group flex items-center gap-1">
               <Soup className="size-4 font-bold text-yellow-400 opacity-0 duration-200 group-hover:opacity-100" />
-              <p className="text-white">Meus Pedidos</p>
+
+              <p className="text-white">Trabalhe Conosco</p>
             </div>
 
             <div className="group flex items-center gap-1">
               <Soup className="size-4 font-bold text-yellow-400 opacity-0 duration-200 group-hover:opacity-100" />
-              <p className="text-white">Pedidos Recomendados </p>
+              <p className="text-white">Promoções e Ofertas</p>
             </div>
 
             <div className="group flex items-center gap-1">
               <Soup className="size-4 font-bold text-yellow-400 opacity-0 duration-200 group-hover:opacity-100" />
-              <p className="text-white">Restaurantes Recomendados</p>
+              <p className="text-white">Programa de Fidelidade</p>
             </div>
           </div>
 

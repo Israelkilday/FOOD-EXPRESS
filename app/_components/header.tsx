@@ -1,28 +1,11 @@
 "use client";
 
-// import Image from "next/image";
 import { Button } from "./ui/button";
-import {
-  CircleUserRound,
-  HeartIcon,
-  HomeIcon,
-  LogInIcon,
-  LogOutIcon,
-  MenuIcon,
-  ScrollText,
-  Soup,
-} from "lucide-react";
+import { CircleUserRound, LogOutIcon, Soup } from "lucide-react";
 import Link from "next/link";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "./ui/sheet";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Separator } from "./ui/separator";
+import SideMenu from "./sideMenu";
 
 const Header = () => {
   const { data } = useSession();
@@ -35,18 +18,11 @@ const Header = () => {
       <div className="flex items-center gap-3">
         <div>
           <Link href="/">
-            <h2 className="mr-2 flex items-center justify-center  font-shadows-into-light text-xl font-semibold text-primary duration-150 hover:text-yellow-400 lg:text-2xl">
+            <h2 className="mr-2 flex items-center justify-center  font-shadows-into-light text-[22px] font-semibold text-primary duration-150 hover:text-yellow-400 lg:text-2xl">
               Food
               <Soup className="lg:size-7" size={20} />
               Express
             </h2>
-
-            {/* <Image
-              src="/Logo.png"
-              alt="FSW Foods"
-              fill
-              className="object-cover"
-            /> */}
           </Link>
         </div>
 
@@ -77,120 +53,17 @@ const Header = () => {
         )}
       </div>
 
-      <Sheet>
-        <SheetTrigger className="lg:hidden">
-          <Button
-            size="icon"
-            variant="outline"
-            className="border-none bg-transparent"
-          >
-            <MenuIcon />
-          </Button>
-        </SheetTrigger>
-
-        <SheetContent>
-          <SheetHeader>
-            <SheetTitle className="text-left">Menu</SheetTitle>
-          </SheetHeader>
-
-          {data?.user ? (
-            <>
-              <div className="flex justify-between pt-6">
-                <div className="flex items-center gap-3 ">
-                  <Avatar>
-                    <AvatarImage
-                      src={data?.user?.image as string | undefined}
-                    />
-                    <AvatarFallback>
-                      {data?.user?.name?.split(" ")[0][0]}
-                      {data?.user?.name?.split(" ")[1][0]}
-                    </AvatarFallback>
-                  </Avatar>
-
-                  <div>
-                    <h3 className="font-semibold">{data?.user?.name}</h3>
-                    <span className="block text-xs text-muted-foreground">
-                      {data?.user?.email}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </>
-          ) : (
-            <>
-              <div className="flex items-center justify-between pt-10">
-                <h2 className="font-semibold">Olá, Faça seu Login!</h2>
-                <Button size="icon" onClick={handleSignInClick}>
-                  <LogInIcon />
-                </Button>
-              </div>
-            </>
-          )}
-
-          <div className="py-6">
-            <Separator />
-          </div>
-
-          <div space-y-2>
-            <Button
-              variant="ghost"
-              className="font- w-full justify-start space-x-3 rounded-full text-sm"
-              asChild
-            >
-              <Link href="/">
-                <HomeIcon size={16} />
-                <span className="block">Início</span>
-              </Link>
-            </Button>
-
-            {data?.user && (
-              <>
-                <Button
-                  variant="ghost"
-                  className="font- w-full justify-start space-x-3 rounded-full text-sm"
-                  asChild
-                >
-                  <Link href="/my-orders">
-                    <ScrollText size={16} />
-                    <span className="block">Meus Pedidos</span>
-                  </Link>
-                </Button>
-
-                <Button
-                  variant="ghost"
-                  className="font- w-full justify-start space-x-3 rounded-full text-sm"
-                  asChild
-                >
-                  <Link href="/my-favorite-restaurants">
-                    <HeartIcon size={16} />
-                    <span className="block">Retaurantes Favoritos</span>
-                  </Link>
-                </Button>
-              </>
-            )}
-          </div>
-
-          <div className="py-6">
-            <Separator />
-          </div>
-
-          {data?.user && (
-            <Button
-              variant="ghost"
-              className="font- w-full justify-start space-x-3 rounded-full text-sm"
-            >
-              <LogOutIcon size={16} onClick={handleSignOutClick} />
-              <span className="block">Sair da Conta</span>
-            </Button>
-          )}
-        </SheetContent>
-      </Sheet>
+      <SideMenu />
 
       {data?.user ? (
         <div className="hidden items-center justify-between px-5 lg:flex lg:px-0">
           <div className="flex items-center gap-3">
             <Avatar>
               <AvatarImage src={data.user?.image ?? ""} />
+              <AvatarFallback>
+                {data?.user?.name?.split(" ")[0][0]}
+                {data?.user?.name?.split(" ")[1][0]}
+              </AvatarFallback>
             </Avatar>
 
             <h2 className="mr-3 font-semibold text-slate-600 md:text-lg">
