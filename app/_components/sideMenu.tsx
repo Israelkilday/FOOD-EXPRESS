@@ -1,9 +1,17 @@
+"use client";
+
 import {
+  CupSoda,
+  Donut,
+  Fish,
   HeartIcon,
   HomeIcon,
+  IceCreamCone,
   LogInIcon,
   LogOutIcon,
   MenuIcon,
+  Pizza,
+  Salad,
   ScrollText,
 } from "lucide-react";
 import {
@@ -80,10 +88,9 @@ const SideMenu = () => {
             <Separator />
           </div>
 
-          <div space-y-2>
+          <div className="space-y-1">
             <Button
-              variant="ghost"
-              className="font- w-full justify-start space-x-3 rounded-full text-sm"
+              className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
               asChild
             >
               <Link href="/">
@@ -95,8 +102,7 @@ const SideMenu = () => {
             {data?.user && (
               <>
                 <Button
-                  variant="ghost"
-                  className="font- w-full justify-start space-x-3 rounded-full text-sm"
+                  className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
                   asChild
                 >
                   <Link href="/my-orders">
@@ -106,8 +112,7 @@ const SideMenu = () => {
                 </Button>
 
                 <Button
-                  variant="ghost"
-                  className="font- w-full justify-start space-x-3 rounded-full text-sm"
+                  className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
                   asChild
                 >
                   <Link href="/my-favorite-restaurants">
@@ -123,11 +128,76 @@ const SideMenu = () => {
             <Separator />
           </div>
 
-          {data?.user && (
+          <div className="space-y-1">
             <Button
-              variant="ghost"
-              className="font- w-full justify-start space-x-3 rounded-full text-sm"
+              className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
+              asChild
             >
+              <Link href="/categories/e4497aae-fe75-4119-bfc9-a26bc1ad062c/products">
+                <IceCreamCone size={16} />
+                <span className="block">Sobremesas</span>
+              </Link>
+            </Button>
+
+            <Button
+              className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
+              asChild
+            >
+              <Link href="/categories/63cfd83e-89b1-424e-a776-82e7c5d8a9ea/products">
+                <Donut size={16} />
+                <span className="block">Hambúrgueres</span>
+              </Link>
+            </Button>
+            <Button
+              className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
+              asChild
+            >
+              <Link href="/categories/a9fdde66-2464-411a-b711-3ea4bd47816a/products">
+                <Fish size={16} />
+                <span className="block">Japonesa</span>
+              </Link>
+            </Button>
+
+            <Button
+              className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
+              asChild
+            >
+              <Link href="/categories/2f18dd53-e1cd-4abf-82a1-e24814806734/products">
+                <CupSoda size={16} />
+                <span className="block">Sucos</span>
+              </Link>
+            </Button>
+
+            <Button
+              className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
+              asChild
+            >
+              <Link href="/categories/df818735-ffb5-494d-bdb8-5640d7ae5721/products">
+                <Pizza size={16} />
+                <span className="block">Pizzas</span>
+              </Link>
+            </Button>
+
+            <Button
+              className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
+              asChild
+            >
+              <Link
+                href="/categories/d754303a-50fe-4ad3-b787-0aae10455c65/products"
+                className=""
+              >
+                <Salad size={16} />
+                <span className="block">Brasileira</span>
+              </Link>
+            </Button>
+          </div>
+
+          <div className="py-6">
+            <Separator />
+          </div>
+
+          {data?.user && (
+            <Button className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white">
               <LogOutIcon size={16} onClick={handleSignOutClick} />
               <span className="block">Sair da Conta</span>
             </Button>
