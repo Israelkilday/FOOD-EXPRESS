@@ -58,7 +58,7 @@ const Home = async () => {
       <section className="items-center justify-between overflow-hidden md:flex md:h-[400px] md:bg-primary md:px-24 lg:h-[500px]">
         <div className="">
           <div className="hidden md:block">
-            <h1 className="pb-4 font-poppins font-bold text-white md:text-4xl lg:text-6xl">
+            <h1 className="animate-teste pb-4 font-poppins font-bold text-white md:text-4xl lg:text-6xl">
               Está com Fome?
             </h1>
             <p className="pb-6 text-sm font-semibold text-white lg:text-base">
@@ -81,7 +81,7 @@ const Home = async () => {
             style={{
               objectFit: "contain",
             }}
-            className="translate-x-24 translate-y-32"
+            className="translate-x-24 translate-y-32 animate-rotation"
           />
         </div>
       </section>
