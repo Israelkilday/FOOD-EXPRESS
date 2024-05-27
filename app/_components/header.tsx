@@ -15,7 +15,7 @@ const Header = () => {
   const handleSignInClick = () => signIn();
 
   return (
-    <header className="flex justify-between px-5 pt-6 md:px-24 md:pb-5">
+    <header className="flex justify-between p-5 md:px-24 ">
       <div className="flex items-center gap-3">
         <div>
           <Link href="/">
@@ -30,8 +30,8 @@ const Header = () => {
         {data?.user && (
           <div className="hidden items-center lg:flex">
             <Button
-              asChild
               className="hidden justify-start bg-transparent hover:bg-transparent lg:flex"
+              asChild
             >
               <Link href="/my-favorite-restaurants">
                 <span className="text-[16px] text-slate-600 duration-100 hover:text-primary">
@@ -41,8 +41,8 @@ const Header = () => {
             </Button>
 
             <Button
-              asChild
               className="hidden justify-start bg-transparent hover:bg-transparent lg:flex"
+              asChild
             >
               <Link href="/my-orders" className="md:text-lg">
                 <span className="text-[16px] text-slate-600 duration-100 hover:text-primary">
@@ -60,7 +60,6 @@ const Header = () => {
             size="icon"
             variant="outline"
             className="border-none bg-transparent"
-            asChild
           >
             <MenuIcon />
           </Button>
@@ -90,7 +89,6 @@ const Header = () => {
               variant="secondary"
               size="icon"
               className="hidden text-slate-600 lg:flex"
-              asChild
             >
               <LogOutIcon onClick={handleSignOutClick} />
             </Button>
