@@ -11,6 +11,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const fetch = async () => {
+  console.log("testando");
   const getProducts = db.product.findMany({
     where: {
       discountPercentage: {
@@ -58,7 +59,7 @@ const Home = async () => {
       <section className="items-center justify-between overflow-hidden md:flex md:h-[400px] md:bg-primary md:px-24 lg:h-[500px]">
         <div className="">
           <div className="hidden md:block">
-            <h1 className="animate-teste pb-4 font-poppins font-bold text-white md:text-4xl lg:text-6xl">
+            <h1 className=" pb-4 font-poppins font-bold text-white md:text-4xl lg:text-6xl">
               Está com Fome?
             </h1>
             <p className="pb-6 text-sm font-semibold text-white lg:text-base">

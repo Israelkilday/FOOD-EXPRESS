@@ -1,11 +1,12 @@
 "use client";
 
 import { Button } from "./ui/button";
-import { CircleUserRound, LogOutIcon, Soup } from "lucide-react";
+import { CircleUserRound, LogOutIcon, MenuIcon, Soup } from "lucide-react";
 import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import SideMenu from "./sideMenu";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
 const Header = () => {
   const { data } = useSession();
@@ -53,7 +54,22 @@ const Header = () => {
         )}
       </div>
 
-      <SideMenu />
+      <Sheet>
+        <SheetTrigger className="lg:hidden">
+          <Button
+            size="icon"
+            variant="outline"
+            className="border-none bg-transparent"
+            asChild
+          >
+            <MenuIcon />
+          </Button>
+        </SheetTrigger>
+
+        <SheetContent>
+          <SideMenu />
+        </SheetContent>
+      </Sheet>
 
       {data?.user ? (
         <div className="hidden items-center justify-between px-5 lg:flex lg:px-0">
@@ -74,6 +90,7 @@ const Header = () => {
               variant="secondary"
               size="icon"
               className="hidden text-slate-600 lg:flex"
+              asChild
             >
               <LogOutIcon onClick={handleSignOutClick} />
             </Button>
