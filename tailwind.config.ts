@@ -73,18 +73,24 @@ const config = {
         },
         rotation: {
           "0%": { transform: "translateY(100%) translateX(96px)" },
-          "50%": {
-            transform: "translateY(-10px) translateX(96px) rotate(360deg)",
-          },
           "100%": {
             transform: "translateY(128px) translateX(96px) rotate(360deg)",
           },
         },
-        teste: {
-          "0%": { transform: "translateX(100%)" },
-          "50%": {
-            transform: "translateY(50%)",
+        slide_name: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": {
+            transform: "translateY(0)",
           },
+        },
+        slide_name_2: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": {
+            transform: "translateY(0)",
+          },
+        },
+        slide_form: {
+          "0%": { transform: "translateX(-100%)" },
           "100%": {
             transform: "translateY(0)",
           },
@@ -93,8 +99,10 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        rotation: "rotation 1.4s ease-in-out",
-        teste: "teste 1s ease-in-out",
+        rotation: "rotation 1s ease-in-out",
+        slide_name: "slide_name .5s ease-in-out",
+        slide_name_2: "slide_name_2 .7s ease-in-out",
+        slide_form: "slide_name_2 .9s ease-in-out",
       },
     },
   },

@@ -112,7 +112,8 @@ const SideMenu = () => {
           className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
           asChild
         >
-          <Link href="/categories/e4497aae-fe75-4119-bfc9-a26bc1ad062c/products">
+          {/* <Link href="/categories/e4497aae-fe75-4119-bfc9-a26bc1ad062c/products"> */}
+          <Link href="/categories/cd2c9e1e-43ff-47a9-88a4-5e7a005d9cb8/products">
             <IceCreamCone size={16} />
             <span className="block">Sobremesas</span>
           </Link>
@@ -122,7 +123,8 @@ const SideMenu = () => {
           className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
           asChild
         >
-          <Link href="/categories/63cfd83e-89b1-424e-a776-82e7c5d8a9ea/products">
+          {/* <Link href="/categories/63cfd83e-89b1-424e-a776-82e7c5d8a9ea/products"> */}
+          <Link href="/categories/068528d4-95c4-4df2-8018-25092ea818cb/products">
             <Donut size={16} />
             <span className="block">Hambúrgueres</span>
           </Link>
@@ -131,7 +133,8 @@ const SideMenu = () => {
           className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
           asChild
         >
-          <Link href="/categories/a9fdde66-2464-411a-b711-3ea4bd47816a/products">
+          {/* <Link href="/categories/a9fdde66-2464-411a-b711-3ea4bd47816a/products"> */}
+          <Link href="/categories/1eac715b-64a0-495a-a2c2-91ab5ce162c6/products">
             <Fish size={16} />
             <span className="block">Japonesa</span>
           </Link>
@@ -141,7 +144,8 @@ const SideMenu = () => {
           className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
           asChild
         >
-          <Link href="/categories/2f18dd53-e1cd-4abf-82a1-e24814806734/products">
+          {/* <Link href="/categories/2f18dd53-e1cd-4abf-82a1-e24814806734/products"> */}
+          <Link href="/categories/e6d5d58d-5a4b-44b3-a420-96c1e14afb95/products">
             <CupSoda size={16} />
             <span className="block">Sucos</span>
           </Link>
@@ -151,7 +155,8 @@ const SideMenu = () => {
           className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
           asChild
         >
-          <Link href="/categories/df818735-ffb5-494d-bdb8-5640d7ae5721/products">
+          {/* <Link href="/categories/df818735-ffb5-494d-bdb8-5640d7ae5721/products"> */}
+          <Link href="/categories/e78fdd67-163c-4d3c-a9de-57f402eaeff7/products">
             <Pizza size={16} />
             <span className="block">Pizzas</span>
           </Link>
@@ -161,10 +166,8 @@ const SideMenu = () => {
           className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
           asChild
         >
-          <Link
-            href="/categories/d754303a-50fe-4ad3-b787-0aae10455c65/products"
-            className=""
-          >
+          {/* <Link href="/categories/d754303a-50fe-4ad3-b787-0aae10455c65/products"> */}
+          <Link href="/categories/03894850-dc3c-4682-a55c-44188fae1751/products">
             <Salad size={16} />
             <span className="block">Brasileira</span>
           </Link>
