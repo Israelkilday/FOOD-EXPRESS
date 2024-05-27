@@ -55,7 +55,7 @@ const Header = () => {
       </div>
 
       <Sheet>
-        <SheetTrigger className="lg:hidden">
+        <SheetTrigger asChild className="lg:hidden">
           <Button
             size="icon"
             variant="outline"
