@@ -4,6 +4,8 @@ import Link from "next/link";
 import { ArrowUp, Headset, Phone, Soup } from "lucide-react";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
+import { Separator } from "./ui/separator";
 
 const scrollToTop = () => {
   window.scrollTo({
@@ -15,7 +17,7 @@ const scrollToTop = () => {
 const Footer = () => {
   return (
     <footer className="flex flex-col pt-6 lg:pt-8">
-      <div className="flex w-full flex-col justify-between bg-primary px-5 pb-5 pt-6 lg:flex-row lg:px-24 lg:pb-9 lg:pt-5">
+      <div className="flex w-full flex-col justify-between bg-primary px-5 pt-6 lg:flex-row lg:px-24 lg:pb-9 lg:pt-5">
         <div className="flex flex-col items-start justify-center gap-5 pb-1 md:justify-start lg:pt-5">
           <Link href="/">
             <h2 className="mr-2 flex items-center justify-center  font-shadows-into-light text-xl font-semibold text-white duration-150 hover:text-yellow-400 lg:text-2xl">
@@ -42,9 +44,36 @@ const Footer = () => {
               <MdEmail className="size-6 text-white duration-150 hover:font-bold hover:text-yellow-400 lg:size-7" />
             </a>
           </div>
-        </div>
 
-        <div className="flex flex-col gap-5 pt-5 lg:flex-row lg:gap-10 lg:px-0">
+          <div className="flex gap-3">
+            <Link href="https://www.apple.com/br/store">
+              <Image
+                src="/lojaapple.png"
+                alt="Logo_Apple"
+                width={110}
+                height={0}
+                style={{
+                  objectFit: "contain",
+                }}
+              />
+            </Link>
+
+            <Link href="https://play.google.com/store/games?hl=pt">
+              <Image
+                src="/playstore.png"
+                alt="Logo_Playstore"
+                width={119}
+                height={0}
+                style={{
+                  objectFit: "contain",
+                }}
+              />
+            </Link>
+          </div>
+        </div>
+        <Separator className="mt-6 lg:hidden" />
+
+        <div className="flex flex-col gap-5 pb-6 pt-5 lg:flex-row lg:gap-20">
           <div className="flex flex-col">
             <h3 className="text-white md:pl-5">DEPARTAMENTOS</h3>
             <div className="group flex items-center gap-1">
@@ -97,18 +126,21 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between border-t border-gray-100 bg-primary px-5 py-5 lg:px-24">
-        <p className="text-sm text-white md:text-base">
-          © 2024 ISRAEL KILDAY
-          <br className="md:hidden" /> - Todos os direitos reservados
-        </p>
+      <div className="flex flex-col bg-primary px-5 pb-5 pt-0 lg:px-24">
+        <Separator className="mb-6" />
+        <div className="flex justify-between lg:flex-row">
+          <div className="flex flex-col text-start text-sm text-white md:flex-row md:text-base lg:flex-row">
+            <span className="mr-1">© 2024 ISRAEL KILDAY</span>
+            <p>- Todos os direitos reservados </p>
+          </div>
 
-        <button
-          onClick={scrollToTop}
-          className="animate-bounce rounded-full border border-white p-2 outline-none"
-        >
-          <ArrowUp className="text-white" />
-        </button>
+          <button
+            onClick={scrollToTop}
+            className="animate-bounce rounded-full border border-white p-2 outline-none"
+          >
+            <ArrowUp className="text-white" />
+          </button>
+        </div>
       </div>
     </footer>
   );

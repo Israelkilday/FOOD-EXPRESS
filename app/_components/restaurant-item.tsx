@@ -45,7 +45,7 @@ const RestaurantItem = ({
   return (
     <div
       className={cn(
-        "min-w-[266px] max-w-[266px] lg:min-w-[276px] lg:max-w-[276px]",
+        "min-w-[266px] max-w-[266px] lg:min-w-[277px] lg:max-w-[277px]",
         className,
       )}
     >

@@ -88,7 +88,7 @@ const Header = () => {
             <Button
               variant="secondary"
               size="icon"
-              className="hidden text-slate-600 lg:flex"
+              className="hidden text-slate-600 hover:bg-yellow-400 lg:flex"
             >
               <LogOutIcon onClick={handleSignOutClick} />
             </Button>
