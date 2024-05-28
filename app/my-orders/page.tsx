@@ -5,6 +5,8 @@ import { redirect } from "next/navigation";
 import Header from "../_components/header";
 import OrderItem from "./_components/order-item";
 import { Separator } from "../_components/ui/separator";
+import { Card } from "../_components/ui/card";
+import { Soup } from "lucide-react";
 
 const MyOrdersPage = async () => {
   const session = await getServerSession(auhtOptions);
@@ -37,9 +39,17 @@ const MyOrdersPage = async () => {
         <h2 className="pb-6 text-lg font-semibold">Meus Pedidos</h2>
 
         <div className="flex grid-cols-2 flex-col gap-3 md:grid lg:grid-cols-3 lg:gap-4">
-          {orders.map((order) => (
-            <OrderItem key={order.id} order={order} />
-          ))}
+          {orders.length > 0 ? (
+            orders.map((order) => <OrderItem key={order.id} order={order} />)
+          ) : (
+            <Card className="flex flex-col items-center gap-5 p-4 text-center shadow-lg md:min-w-96 md:flex-row-reverse md:text-left lg:min-w-[500px]">
+              <h3 className="font-medium">
+                Voçê ainda não realizou nenhum pedido.
+              </h3>
+
+              <Soup className="size-32 text-primary" />
+            </Card>
+          )}
         </div>
       </div>
     </>
