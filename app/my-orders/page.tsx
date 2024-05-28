@@ -33,10 +33,10 @@ const MyOrdersPage = async () => {
 
       <Separator />
 
-      <div className="px-5 py-6">
+      <div className="px-5 py-6 md:px-24">
         <h2 className="pb-6 text-lg font-semibold">Meus Pedidos</h2>
 
-        <div className="grid-cols-2 gap-2 space-y-3 md:grid">
+        <div className="flex grid-cols-2 flex-col gap-3 md:grid lg:grid-cols-3 lg:gap-4">
           {orders.map((order) => (
             <OrderItem key={order.id} order={order} />
           ))}
