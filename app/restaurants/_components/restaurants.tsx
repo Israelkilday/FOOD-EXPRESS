@@ -58,7 +58,7 @@ const Restaurants = ({ userFavoriteRestaurants }: RestaurantProps) => {
               />
             ))
           ) : (
-            <Card className="flex flex-col items-center gap-5 p-4 text-center shadow-lg md:min-w-96 md:flex-row-reverse md:text-left lg:min-w-[500px]">
+            <Card className="flex flex-col items-center gap-5 overflow-hidden text-ellipsis p-4 text-center shadow-lg md:min-w-96 md:flex-row-reverse md:text-left">
               <h3 className="font-medium">Nenhum resultado para:{searchFor}</h3>
 
               <Soup className="size-32 text-primary" />

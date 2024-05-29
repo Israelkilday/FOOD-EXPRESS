@@ -31,7 +31,7 @@ const MyOrdersPage = async () => {
 
   return (
     <>
-      <Header />
+      <Header haveSearchBar={true} />
 
       <Separator />
 

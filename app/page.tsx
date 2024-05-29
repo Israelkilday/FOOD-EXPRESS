@@ -121,7 +121,7 @@ const Home = async () => {
 
       <div className="min-w-full gap-3 px-5 pt-6 md:flex md:px-24 lg:pt-8">
         <Link
-          href={`/categories/${burguersCategory?.id}/products`}
+          href={`/categories/${pizzasCategory?.id}/products`}
           className="hidden md:flex"
         >
           <Promobanner
@@ -130,7 +130,7 @@ const Home = async () => {
           />
         </Link>
 
-        <Link href={`/categories/${pizzasCategory?.id}/products`}>
+        <Link href={`/categories/${burguersCategory?.id}/products`}>
           <Promobanner
             src="/promo_banner_2.svg"
             alt="Até 30% de desconto em pizzas"
