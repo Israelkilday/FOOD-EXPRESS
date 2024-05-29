@@ -53,7 +53,9 @@ const Home = async () => {
 
   return (
     <main>
-      <Header />
+      <header>
+        <Header haveSearchBar={false} />
+      </header>
 
       <section className="items-center justify-between overflow-hidden md:flex md:h-[400px] md:bg-primary md:px-24 lg:h-[500px]">
         <div className="">

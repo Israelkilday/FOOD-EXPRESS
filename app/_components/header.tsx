@@ -7,8 +7,13 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import SideMenu from "./sideMenu";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import Search from "./search";
 
-const Header = () => {
+interface HeaderProps {
+  haveSearchBar: boolean;
+}
+
+const Header = ({ haveSearchBar }: HeaderProps) => {
   const { data } = useSession();
 
   const handleSignOutClick = () => signOut();
@@ -16,10 +21,10 @@ const Header = () => {
 
   return (
     <header className="flex justify-between p-5 md:px-24 ">
-      <div className="flex items-center gap-3">
+      <div className="flex items-center">
         <div>
           <Link href="/">
-            <h2 className="mr-2 flex items-center justify-center  font-shadows-into-light text-[22px] font-semibold text-primary duration-150 hover:text-yellow-400 lg:text-2xl">
+            <h2 className="mr-5 flex items-center justify-center font-shadows-into-light text-[22px] font-semibold text-primary duration-150 hover:text-yellow-400 lg:text-2xl">
               Food
               <Soup className="lg:size-7" size={20} />
               Express
@@ -34,7 +39,7 @@ const Header = () => {
               asChild
             >
               <Link href="/my-favorite-restaurants">
-                <span className="text-[16px] text-slate-600 duration-100 hover:text-primary">
+                <span className="text-base text-slate-600 duration-100 hover:text-primary">
                   Restaurantes Favoritos
                 </span>
               </Link>
@@ -45,7 +50,7 @@ const Header = () => {
               asChild
             >
               <Link href="/my-orders" className="md:text-lg">
-                <span className="text-[16px] text-slate-600 duration-100 hover:text-primary">
+                <span className="text-base text-slate-600 duration-100 hover:text-primary">
                   Meus Pedidos
                 </span>
               </Link>
@@ -53,6 +58,12 @@ const Header = () => {
           </div>
         )}
       </div>
+
+      {haveSearchBar && (
+        <div className="hidden lg:flex">
+          <Search />
+        </div>
+      )}
 
       <Sheet>
         <SheetTrigger asChild className="lg:hidden">

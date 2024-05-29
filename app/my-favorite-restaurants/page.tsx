@@ -26,7 +26,7 @@ const MyFavoriteRestaurants = async () => {
 
   return (
     <>
-      <Header />
+      <Header haveSearchBar={true} />
 
       <Separator />
 
@@ -38,7 +38,6 @@ const MyFavoriteRestaurants = async () => {
             userFavoriterestaurants.map(({ restaurant }) => (
               <RestaurantItem
                 key={restaurant.id}
-                // restaurant={restaurant}
                 restaurant={JSON.parse(JSON.stringify(restaurant))}
                 className="min-w-full max-w-full"
                 userFavoriteRestaurants={userFavoriterestaurants}

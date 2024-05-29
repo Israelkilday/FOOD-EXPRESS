@@ -68,13 +68,11 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
   return (
     <div>
       <RestaurantImage
-        // restaurant={restaurant}
         restaurant={JSON.parse(JSON.stringify(restaurant))}
         userFavoriteRestaurants={userFavoriteRestaurants}
       />
 
       <div className="relative z-50 mt-[-1.5rem] flex items-center justify-between rounded-tl-3xl rounded-tr-3xl bg-white px-5 pt-5">
-        {/* TITULO */}
         <div className="flex items-center gap-[0.375rem]">
           <div className="relative h-8 w-8">
             <Image
@@ -94,7 +92,6 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
       </div>
 
       <div className="px-5">
-        {/* <DeliveryInfo restaurant={restaurant} /> */}
         <DeliveryInfo restaurant={JSON.parse(JSON.stringify(restaurant))} />
       </div>
 
