@@ -35,7 +35,7 @@ const Header = ({ haveSearchBar }: HeaderProps) => {
         {data?.user && (
           <div className="hidden items-center lg:flex">
             <Button
-              className="hidden justify-start bg-transparent hover:bg-transparent lg:flex"
+              className="hidden justify-start bg-transparent hover:bg-transparent lg:flex lg:pr-2"
               asChild
             >
               <Link href="/my-favorite-restaurants">
@@ -46,7 +46,7 @@ const Header = ({ haveSearchBar }: HeaderProps) => {
             </Button>
 
             <Button
-              className="hidden justify-start bg-transparent hover:bg-transparent lg:flex"
+              className="hidden justify-start bg-transparent hover:bg-transparent lg:flex lg:pr-1"
               asChild
             >
               <Link href="/my-orders" className="md:text-lg">

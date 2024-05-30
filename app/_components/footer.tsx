@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="flex w-full flex-col justify-between bg-primary px-5 pt-6 md:px-24 lg:flex-row lg:px-24 lg:pb-9 lg:pt-5">
         <div className="flex flex-col items-start justify-center gap-5 pb-1 md:justify-start lg:pt-5">
           <Link href="/">
-            <h2 className="mr-2 flex items-center justify-center  font-shadows-into-light text-xl font-semibold text-white duration-150 hover:text-yellow-400 lg:text-2xl">
+            <h2 className="mr-2 flex items-center justify-center font-shadows-into-light text-[22px] font-semibold text-white duration-150 hover:text-yellow-400 lg:text-2xl">
               Food
               <Soup className="lg:size-7" size={20} />
               Express
