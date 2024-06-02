@@ -61,12 +61,10 @@ const ProductDetails = ({
   };
 
   const handleAddToCartClick = () => {
-    // VERIFICAR  SE HÁ ALGUM PRODUTO DE OUTRO RESTAURANTE NO CARRINHO
     const hasDifferentRestaurantsProduct = products.some(
       (cartProduct) => cartProduct.restaurantId !== product.restaurantId,
     );
 
-    // SE HOUVER , ABRIR UM AVISO
     if (hasDifferentRestaurantsProduct) {
       return setIsComfirmationDialogOpen(true);
     }
@@ -88,8 +86,6 @@ const ProductDetails = ({
   return (
     <>
       <div className="relative z-50 mt-[-1.5rem] rounded-tl-3xl rounded-tr-3xl bg-white py-5">
-        {/* IMAGEM E NOME DO RESTAURANT */}
-
         <div className="flex items-center gap-[0.375rem] px-5">
           <div className="relative h-7 w-7">
             <Image
@@ -105,12 +101,9 @@ const ProductDetails = ({
           </span>
         </div>
 
-        {/* NOME DO PRODUTO */}
         <h1 className="mb-3 mt-1 px-5 text-xl font-semibold">{product.name}</h1>
 
-        {/* PREÇO DO PRODUTO E QUANTIDADE */}
         <div className="flex justify-between px-5">
-          {/* PREÇO COM DESCONTO */}
           <div>
             <div className="flex items-center gap-2">
               <h2 className="text-xl font-semibold">
@@ -121,7 +114,6 @@ const ProductDetails = ({
               )}
             </div>
 
-            {/* PREÇO ORIGINAL */}
             {product.discountPercentage > 0 && (
               <p className="text-sm text-muted-foreground line-through">
                 De: {formatCurrency(Number(product.price))}
@@ -129,7 +121,6 @@ const ProductDetails = ({
             )}
           </div>
 
-          {/*  QUANTIDADE */}
           <div className="flex items-center justify-center gap-3 text-center">
             <Button
               size="icon"
@@ -146,9 +137,7 @@ const ProductDetails = ({
           </div>
         </div>
 
-        {/* DADOS DA ENTREGA */}
         <div className="px-5">
-          {/* <DeliveryInfo restaurant={product.restaurant} /> */}
           <DeliveryInfo
             restaurant={JSON.parse(JSON.stringify(product.restaurant))}
           />
