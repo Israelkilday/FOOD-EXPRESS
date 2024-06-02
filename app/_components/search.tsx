@@ -25,7 +25,7 @@ const Search = () => {
 
   return (
     <form
-      className="flex min-w-[390px] gap-2 md:px-5"
+      className="flex gap-2 md:px-5 lg:min-w-[390px]"
       onSubmit={handleSearchSubmit}
     >
       <Input

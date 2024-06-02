@@ -50,7 +50,6 @@ const RestaurantItem = ({
       )}
     >
       <div className="w-full space-y-3">
-        {/* IAMGEM */}
         <div className="relative h-[136px] w-full">
           <Link href={`/restaurants/${restaurant.id}`}>
             <Image
@@ -82,7 +81,7 @@ const RestaurantItem = ({
 
           <div className="flex gap-3">
             <div className="flex items-center gap-1">
-              <BikeIcon className=" text-primary lg:size-4" size={14} />
+              <BikeIcon className="text-primary lg:size-4" size={14} />
 
               <span className="text-xs text-muted-foreground lg:font-semibold">
                 {Number(restaurant.deliveryFree) === 0

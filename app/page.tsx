@@ -69,7 +69,7 @@ const Home = async () => {
             </p>
           </div>
 
-          <div className="rounded-lg p-4 md:animate-slide_form md:bg-white md:px-0">
+          <div className="rounded-lg px-5 pb-4 md:animate-slide_form md:bg-white md:px-0 md:pt-4">
             <Search />
           </div>
         </div>

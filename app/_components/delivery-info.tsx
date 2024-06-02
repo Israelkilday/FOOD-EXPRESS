@@ -10,12 +10,11 @@ interface DeliveryInfoProps {
 const DeliveryInfo = ({ restaurant }: DeliveryInfoProps) => {
   return (
     <>
-      <Card className="mt-6 flex justify-around py-3">
-        {/* CUSTO */}
+      <Card className="mt-6 flex items-center justify-around py-3">
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1 text-muted-foreground">
+            <BikeIcon className="text-primary" size={14} />
             <span className="text-xs">Entrega</span>
-            <BikeIcon size={14} />
           </div>
 
           {Number(restaurant.deliveryFree) > 0 ? (
@@ -27,11 +26,10 @@ const DeliveryInfo = ({ restaurant }: DeliveryInfoProps) => {
           )}
         </div>
 
-        {/* TEMPO */}
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1 text-muted-foreground">
+            <TimerIcon className="text-primary" size={14} />
             <span className="text-xs">Entrega</span>
-            <TimerIcon size={14} />
           </div>
 
           <p className="text-xs font-semibold">
