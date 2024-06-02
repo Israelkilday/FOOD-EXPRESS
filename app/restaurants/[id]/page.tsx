@@ -2,7 +2,7 @@ import { db } from "@/app/_lib/prisma";
 import { notFound } from "next/navigation";
 import RestaurantImage from "./_componentes/restaurant-image";
 import Image from "next/image";
-import { Copy, Phone, StarIcon } from "lucide-react";
+import { StarIcon } from "lucide-react";
 import DeliveryInfo from "@/app/_components/delivery-info";
 import ProductList from "@/app/_components/product-list";
 import CartBanner from "./_componentes/cart-banner";
@@ -10,9 +10,7 @@ import { getServerSession } from "next-auth";
 import { auhtOptions } from "@/app/_lib/auth";
 import Header from "@/app/_components/header";
 import { Separator } from "@/app/_components/ui/separator";
-import { Button } from "@/app/_components/ui/button";
-import { useCopyToClipboard } from "@uidotdev/usehooks";
-import { toast } from "sonner";
+import DescriptionRestaurant from "@/app/_components/description-restaurant";
 
 interface RestaurantPageProps {
   params: {
@@ -57,14 +55,6 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
       },
     },
   });
-
-  // eslint-disable-next-line no-unused-vars
-  const [copied, copyToClipboard] = useCopyToClipboard();
-
-  const handleCopy = () => {
-    copyToClipboard("(85) 1234 5678");
-    toast.success("Número de Telefone copiado com sucesso!");
-  };
 
   if (!restaurant) {
     return notFound();
@@ -122,7 +112,7 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
               />
             </div>
 
-            <div className="mt-5 flex justify-between gap-4 overflow-x-scroll px-5 pb-1 md:px-24 lg:pl-10 [&::-webkit-scrollbar]:hidden">
+            <div className="mt-5 flex justify-between gap-4 overflow-x-scroll px-5 md:px-24 lg:pl-10 [&::-webkit-scrollbar]:hidden">
               {restaurant.categories.map((category) => (
                 <div
                   key={category.id}
@@ -135,29 +125,7 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
               ))}
             </div>
 
-            <div className="mt-6 px-5 pb-[5px] md:px-24 lg:pl-10">
-              <h3 className="pb-[6px] font-semibold">Sobre</h3>
-              <p className="text-sm text-muted-foreground">
-                Saboreie o melhor da gastronomia local sem sair de casa! O Food
-                Express reúne uma seleção impecável de restaurantes para atender
-                a todos os paladares e ocasiões.
-              </p>
-            </div>
-
-            <div className="mb-3 flex justify-between md:px-5">
-              <p className="flex items-center gap-2">
-                <Phone className="size-4 font-bold text-purple-500" />
-                (85) 1234 5678
-              </p>
-
-              <Button
-                onClick={handleCopy}
-                className="flex h-8 gap-1 bg-none px-3"
-              >
-                Copiar
-                <Copy className="size-4" />
-              </Button>
-            </div>
+            <DescriptionRestaurant />
           </div>
         </div>
 
@@ -173,7 +141,6 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
           </div>
         ))}
 
-        {/* <CartBanner restaurant={restaurant} /> */}
         <CartBanner restaurant={JSON.parse(JSON.stringify(restaurant))} />
       </div>
     </>
