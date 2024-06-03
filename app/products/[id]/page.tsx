@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import { db } from "../../_lib/prisma";
 import ProductImage from "./_components/product-image";
 import ProductDetails from "./_components/product-details";
+import Header from "@/app/_components/header";
+import { Separator } from "@/app/_components/ui/separator";
 
 interface ProductPageProps {
   params: {
@@ -39,8 +41,16 @@ const ProductPage = async ({ params: { id } }: ProductPageProps) => {
 
   return (
     <div>
+      <div className="hidden md:block">
+        <Header haveSearchBar={true} />
+
+        <Separator className="hidden lg:flex" />
+      </div>
+
       <ProductImage product={product} />
-      <ProductDetails product={product} complementaryProducts={juices} />
+      <div>
+        <ProductDetails product={product} complementaryProducts={juices} />
+      </div>
     </div>
   );
 };

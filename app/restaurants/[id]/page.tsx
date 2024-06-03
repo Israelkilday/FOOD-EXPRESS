@@ -76,73 +76,66 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
         <Separator className="hidden lg:flex" />
       </div>
 
-      <div>
-        <div className="lg:flex lg:pb-4 lg:pl-24 lg:pt-9">
-          <RestaurantImage
-            restaurant={JSON.parse(JSON.stringify(restaurant))}
-            userFavoriteRestaurants={userFavoriteRestaurants}
-          />
+      <div className="lg:flex lg:pl-24 lg:pt-12">
+        <RestaurantImage
+          restaurant={JSON.parse(JSON.stringify(restaurant))}
+          userFavoriteRestaurants={userFavoriteRestaurants}
+        />
 
-          <div className="lg:max-w-[600px]">
-            <div className="relative z-50 mt-[-1.5rem] flex items-center justify-between rounded-tl-3xl rounded-tr-3xl bg-white px-5 pt-5 md:px-24 lg:pl-10">
-              <div className="flex items-center gap-[0.375rem]">
-                <div className="relative h-8 w-8">
-                  <Image
-                    src={restaurant.imageUrl}
-                    alt={restaurant.name}
-                    fill
-                    className="rounded-full object-cover"
-                  />
-                </div>
-                <h1 className="text-xl font-semibold">{restaurant.name}</h1>
-              </div>
-
-              <div className="flex items-center gap-[3px] rounded-full bg-foreground px-2 py-[2px] text-white">
-                <StarIcon
-                  size={12}
-                  className="fill-yellow-400 text-yellow-400"
+        <div className="lg:max-w-[600px]">
+          <div className="relative z-50 mt-[-1.5rem] flex items-center justify-between rounded-tl-3xl rounded-tr-3xl bg-white px-5 pt-5 md:px-24 lg:pl-10">
+            <div className="flex items-center gap-[0.375rem]">
+              <div className="relative h-8 w-8 lg:h-[42px] lg:w-[42px]">
+                <Image
+                  src={restaurant.imageUrl}
+                  alt={restaurant.name}
+                  fill
+                  className="rounded-full object-cover"
                 />
-                <span className="text-xs font-semibold">5.0</span>
               </div>
+              <h1 className="text-xl font-semibold">{restaurant.name}</h1>
             </div>
 
-            <div className="px-5 md:px-24 lg:pl-10">
-              <DeliveryInfo
-                restaurant={JSON.parse(JSON.stringify(restaurant))}
-              />
+            <div className="flex items-center gap-[3px] rounded-full bg-foreground px-2 py-[2px] text-white">
+              <StarIcon size={12} className="fill-yellow-400 text-yellow-400" />
+              <span className="text-xs font-semibold">5.0</span>
             </div>
-
-            <div className="mt-6 flex justify-between gap-4 overflow-x-scroll px-5 md:px-24 lg:pl-10 [&::-webkit-scrollbar]:hidden">
-              {restaurant.categories.map((category) => (
-                <div
-                  key={category.id}
-                  className="min-w-[150px] rounded-lg bg-[#F4F4F4] text-center md:w-[167px] lg:min-w-[140px]"
-                >
-                  <span className="block py-2 text-xs text-muted-foreground">
-                    {category.name}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <DescriptionRestaurant />
           </div>
-        </div>
 
-        <div className="mt-4 space-y-4">
-          <h2 className="px-5 font-semibold md:px-24">Mais Pedidos</h2>
-          <ProductList products={restaurant.products} />
-        </div>
-
-        {restaurant.categories.map((category) => (
-          <div className="mt-6 space-y-4" key={category.id}>
-            <h2 className="px-5 font-semibold  md:px-24">{category.name}</h2>
-            <ProductList products={category.products} />
+          <div className="px-5 md:px-24 lg:pl-10">
+            <DeliveryInfo restaurant={JSON.parse(JSON.stringify(restaurant))} />
           </div>
-        ))}
 
-        <CartBanner restaurant={JSON.parse(JSON.stringify(restaurant))} />
+          <div className="mt-6 flex justify-between gap-4 overflow-x-scroll px-5 md:px-24 lg:pl-10 [&::-webkit-scrollbar]:hidden">
+            {restaurant.categories.map((category) => (
+              <div
+                key={category.id}
+                className="min-w-[150px] rounded-lg bg-[#F4F4F4] text-center md:w-[167px] lg:min-w-[140px]"
+              >
+                <span className="block py-2 text-xs text-muted-foreground">
+                  {category.name}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <DescriptionRestaurant />
+        </div>
       </div>
+
+      <div className="mt-2 space-y-4">
+        <h2 className="px-5 font-semibold md:px-24">Mais Pedidos</h2>
+        <ProductList products={restaurant.products} />
+      </div>
+
+      {restaurant.categories.map((category) => (
+        <div className="mt-6 space-y-4" key={category.id}>
+          <h2 className="px-5 font-semibold  md:px-24">{category.name}</h2>
+          <ProductList products={category.products} />
+        </div>
+      ))}
+
+      <CartBanner restaurant={JSON.parse(JSON.stringify(restaurant))} />
     </>
   );
 };
