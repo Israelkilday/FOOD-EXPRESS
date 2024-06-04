@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { db } from "../../_lib/prisma";
-import ProductImage from "./_components/product-image";
+// import ProductImage from "./_components/product-image";
 import ProductDetails from "./_components/product-details";
 import Header from "@/app/_components/header";
 import { Separator } from "@/app/_components/ui/separator";
@@ -40,18 +40,15 @@ const ProductPage = async ({ params: { id } }: ProductPageProps) => {
   });
 
   return (
-    <div>
-      <div className="hidden md:block">
+    <section>
+      <div className="hidden md:block lg:pb-12">
         <Header haveSearchBar={true} />
 
         <Separator className="hidden lg:flex" />
       </div>
 
-      <ProductImage product={product} />
-      <div>
-        <ProductDetails product={product} complementaryProducts={juices} />
-      </div>
-    </div>
+      <ProductDetails product={product} complementaryProducts={juices} />
+    </section>
   );
 };
 
