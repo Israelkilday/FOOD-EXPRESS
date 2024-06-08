@@ -28,11 +28,11 @@ import {
 import { CartContext } from "@/app/context/cart";
 import { Prisma } from "@prisma/client";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
-import Image from "next/image";
 import { useContext, useState } from "react";
 import ProductImage from "./product-image";
 import { Card } from "@/app/_components/ui/card";
 import { Separator } from "@/app/_components/ui/separator";
+import RestaurantPrevDescription from "@/app/_components/restaurant-prev-description";
 
 interface ProductDetailsProps {
   product: Prisma.ProductGetPayload<{
@@ -93,22 +93,7 @@ const ProductDetails = ({
 
         <section className="lg:max-w-[700px]">
           <div className="relative z-50 mt-[-1.5rem] rounded-tl-3xl rounded-tr-3xl bg-white pt-5">
-            <div className="px-5 pb-3 pt-2 md:px-24 lg:pl-10">
-              <div className="flex items-center gap-[0.375rem]">
-                <div className="relative h-7 w-7 md:h-8 md:w-8 lg:h-10 lg:w-10 ">
-                  <Image
-                    src={product.restaurant.imageUrl}
-                    alt={product.restaurant.name}
-                    fill
-                    className="rounded-full object-cover"
-                  />
-                </div>
-
-                <span className="text-xs text-muted-foreground md:text-sm lg:text-base">
-                  {product.restaurant.name}
-                </span>
-              </div>
-            </div>
+            <RestaurantPrevDescription product={product} />
 
             <Card className="mx-5 py-5 shadow-md md:mx-24 lg:ml-10">
               <h1 className="mb-4 px-5 text-base font-semibold lg:text-lg">
