@@ -10,10 +10,10 @@ interface DeliveryInfoProps {
 const DeliveryInfo = ({ restaurant }: DeliveryInfoProps) => {
   return (
     <>
-      <Card className="mt-6 flex items-center justify-around py-3 shadow-md">
+      <Card className="mt-6 flex items-center justify-around py-3">
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1 text-muted-foreground">
-            <BikeIcon className="size-5 text-primary" size={14} />
+            <BikeIcon className="text-primary md:size-5" size={14} />
             <span className="text-xs md:text-base">Entrega</span>
           </div>
 
@@ -28,7 +28,7 @@ const DeliveryInfo = ({ restaurant }: DeliveryInfoProps) => {
 
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1 text-muted-foreground">
-            <TimerIcon className="size-5 text-primary" size={14} />
+            <TimerIcon className="text-primary md:size-5" size={14} />
             <span className="text-xs md:text-base">Entrega</span>
           </div>
 

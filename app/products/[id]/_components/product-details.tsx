@@ -88,37 +88,37 @@ const ProductDetails = ({
 
   return (
     <>
-      <div>
-        <div className="lg:flex lg:pl-24">
-          <ProductImage product={product} />
+      <div className="lg:flex lg:pl-24">
+        <ProductImage product={product} />
 
-          <div className="lg:max-w-[700px]">
-            <div className="relative z-50 mt-[-1.5rem] rounded-tl-3xl rounded-tr-3xl bg-white pt-5">
-              <div className=" px-5 pb-3 pt-2 md:px-24 lg:pl-10">
-                <Card className="flex w-fit items-center gap-[0.375rem] p-3 shadow-md">
-                  <div className="relative h-7 w-7 md:h-10 md:w-10">
-                    <Image
-                      src={product.restaurant.imageUrl}
-                      alt={product.restaurant.name}
-                      fill
-                      className="rounded-full object-cover"
-                    />
-                  </div>
+        <section className="lg:max-w-[700px]">
+          <div className="relative z-50 mt-[-1.5rem] rounded-tl-3xl rounded-tr-3xl bg-white pt-5">
+            <div className="px-5 pb-3 pt-2 md:px-24 lg:pl-10">
+              <div className="flex items-center gap-[0.375rem]">
+                <div className="relative h-7 w-7 md:h-8 md:w-8 lg:h-10 lg:w-10 ">
+                  <Image
+                    src={product.restaurant.imageUrl}
+                    alt={product.restaurant.name}
+                    fill
+                    className="rounded-full object-cover"
+                  />
+                </div>
 
-                  <span className="text-xs text-muted-foreground md:text-base">
-                    {product.restaurant.name}
-                  </span>
-                </Card>
+                <span className="text-xs text-muted-foreground md:text-sm lg:text-base">
+                  {product.restaurant.name}
+                </span>
               </div>
+            </div>
 
-              <h1 className="mb-4 mt-1 px-5 text-base font-semibold md:px-24 lg:pl-10 lg:text-lg">
+            <Card className="mx-5 py-5 shadow-md md:mx-24 lg:ml-10">
+              <h1 className="mb-4 px-5 text-base font-semibold lg:text-lg">
                 {product.name}
               </h1>
 
-              <div className="flex justify-between px-5 pb-1 md:px-24 lg:pl-10">
+              <div className="flex justify-between px-5 pb-1">
                 <div>
                   <div className="flex items-center gap-2">
-                    <h2 className="text-xl font-semibold">
+                    <h2 className="text-lg font-semibold">
                       {formatCurrency(calculateProductTotalPrice(product))}
                     </h2>
                     {product.discountPercentage > 0 && (
@@ -149,40 +149,44 @@ const ProductDetails = ({
                 </div>
               </div>
 
-              <div className="px-5 md:px-24 lg:pl-10">
+              <div className="px-5">
                 <DeliveryInfo
                   restaurant={JSON.parse(JSON.stringify(product.restaurant))}
                 />
               </div>
 
-              <div className="mt-8 px-5 md:px-24 lg:pl-10">
-                <Card className="p-5 shadow-md">
-                  <div>
-                    <h3 className="pb-2 font-semibold lg:text-lg">Sobre</h3>
-                    <Separator className="mb-2" />
-                    <p className="text-sm text-muted-foreground">
-                      {product.description}
-                    </p>
-                  </div>
-                </Card>
+              <div className="mt-6 px-5 pb-1">
+                <div>
+                  <h3 className="pb-2 font-semibold lg:text-lg">Sobre</h3>
+                  <Separator className="mb-2" />
+                  <p className="text-sm text-muted-foreground">
+                    {product.description}
+                  </p>
+                </div>
+
+                <div className="mt-7">
+                  <Button
+                    className="w-full font-semibold lg:text-base"
+                    onClick={handleAddToCartClick}
+                  >
+                    Adicionar à Sacola
+                  </Button>
+                </div>
               </div>
-            </div>
+            </Card>
           </div>
-        </div>
+        </section>
+      </div>
 
-        <div className="mt-6 space-y-3">
-          <h3 className="px-5 font-semibold md:px-24 lg:text-lg">Sucos</h3>
-          <ProductList products={complementaryProducts} />
-        </div>
+      <div className="mt-6 space-y-3">
+        <h3 className="px-5 font-semibold md:px-24 lg:text-xl">Sucos</h3>
+        <ProductList products={complementaryProducts} />
+      </div>
 
-        <div className="mt-8 px-5 md:px-24">
-          <Button
-            className="w-full font-semibold"
-            onClick={handleAddToCartClick}
-          >
-            Adicionar à Sacola
-          </Button>
-        </div>
+      <div className="mt-8 px-5 md:px-24 lg:hidden">
+        <Button className="w-full font-semibold" onClick={handleAddToCartClick}>
+          Adicionar à Sacola
+        </Button>
       </div>
 
       <Sheet open={isCartOpen} onOpenChange={setIsCArtOpen}>
