@@ -82,10 +82,10 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
           userFavoriteRestaurants={userFavoriteRestaurants}
         />
 
-        <div className="lg:max-w-[600px]">
+        <section className="lg:max-w-[600px]">
           <div className="relative z-50 mt-[-1.5rem] flex items-center justify-between rounded-tl-3xl rounded-tr-3xl bg-white px-5 pt-5 md:px-24 lg:pl-10">
             <div className="flex items-center gap-[0.375rem]">
-              <div className="relative h-8 w-8 lg:h-[42px] lg:w-[42px]">
+              <div className="relative h-8 w-8 lg:h-10 lg:w-10">
                 <Image
                   src={restaurant.imageUrl}
                   alt={restaurant.name}
@@ -93,7 +93,9 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
                   className="rounded-full object-cover"
                 />
               </div>
-              <h1 className="text-xl font-semibold">{restaurant.name}</h1>
+              <h1 className="text-base font-semibold lg:text-lg">
+                {restaurant.name}
+              </h1>
             </div>
 
             <div className="flex items-center gap-[3px] rounded-full bg-foreground px-2 py-[2px] text-white">
@@ -118,19 +120,20 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
               </div>
             ))}
           </div>
-
           <DescriptionRestaurant />
-        </div>
+        </section>
       </div>
 
-      <div className="mt-2 space-y-4">
-        <h2 className="px-5 font-semibold md:px-24">Mais Pedidos</h2>
+      <div className="mt-2 space-y-4 pt-5 lg:pt-9">
+        <h2 className="px-5 font-semibold md:px-24 lg:text-xl">Mais Pedidos</h2>
         <ProductList products={restaurant.products} />
       </div>
 
       {restaurant.categories.map((category) => (
-        <div className="mt-6 space-y-4" key={category.id}>
-          <h2 className="px-5 font-semibold  md:px-24">{category.name}</h2>
+        <div className="mt-9 space-y-4" key={category.id}>
+          <h2 className="px-5 font-semibold md:px-24 lg:text-xl">
+            {category.name}
+          </h2>
           <ProductList products={category.products} />
         </div>
       ))}

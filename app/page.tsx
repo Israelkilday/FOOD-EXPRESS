@@ -88,7 +88,7 @@ const Home = async () => {
         </div>
       </section>
 
-      <div className="px-5 pt-4 md:px-24 lg:pt-8">
+      <div className="px-5 pt-4 md:px-24 lg:pt-11">
         <CategoryList />
       </div>
 
@@ -101,9 +101,9 @@ const Home = async () => {
         </Link>
       </div>
 
-      <div className="space-y-4 pt-6 lg:pt-8">
+      <div className="space-y-4 pt-6 lg:pt-11">
         <div className="flex items-center justify-between px-5 md:px-24">
-          <h2 className="font-semibold lg:text-lg">Pedidos Recomendados</h2>
+          <h2 className="font-semibold lg:text-xl">Pedidos Recomendados</h2>
 
           <Button
             variant="ghost"
@@ -119,7 +119,7 @@ const Home = async () => {
         <ProductList products={products} />
       </div>
 
-      <div className="min-w-full gap-3 px-5 pt-6 md:flex md:px-24 lg:pt-8">
+      <div className="min-w-full gap-3 px-5 pt-6 md:flex md:px-24 lg:pt-11">
         <Link
           href={`/categories/${pizzasCategory?.id}/products`}
           className="hidden md:flex"
@@ -138,9 +138,9 @@ const Home = async () => {
         </Link>
       </div>
 
-      <div className="space-y-4 pt-6 lg:pt-8">
+      <div className="space-y-4 pt-6 lg:pt-11">
         <div className="flex items-center justify-between px-5 md:px-24">
-          <h2 className="font-semibold lg:text-lg">
+          <h2 className="font-semibold lg:text-xl">
             Restaurantes Recomendados
           </h2>
 
