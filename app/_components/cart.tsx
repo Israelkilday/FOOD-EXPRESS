@@ -97,7 +97,6 @@ const Cart = ({ setIsOpen }: CartProps) => {
               ))}
             </div>
 
-            {/* TOTAIS */}
             <div className="mt-6">
               <Card>
                 <CardContent className="space-y-2 p-4">
