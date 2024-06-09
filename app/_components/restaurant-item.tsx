@@ -50,7 +50,7 @@ const RestaurantItem = ({
       )}
     >
       <div className="w-full space-y-3">
-        <div className="relative h-[136px] w-full">
+        <div className="relative h-[136px] w-full lg:h-48">
           <Link href={`/restaurants/${restaurant.id}`}>
             <Image
               src={restaurant.imageUrl}
