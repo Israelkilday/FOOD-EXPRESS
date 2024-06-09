@@ -163,7 +163,7 @@ const ProductDetails = ({
         </section>
       </div>
 
-      <div className="mt-6 space-y-3">
+      <div className="mt-6 space-y-3 lg:mt-11">
         <h3 className="px-5 font-semibold md:px-24 lg:text-xl">Sucos</h3>
         <ProductList products={complementaryProducts} />
       </div>
@@ -175,7 +175,7 @@ const ProductDetails = ({
       </div>
 
       <Sheet open={isCartOpen} onOpenChange={setIsCArtOpen}>
-        <SheetContent className="w-[90vw]">
+        <SheetContent className="overflow-y-auto">
           <SheetHeader>
             <SheetTitle className="text-left">Sacola</SheetTitle>
           </SheetHeader>

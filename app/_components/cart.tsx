@@ -100,7 +100,7 @@ const Cart = ({ setIsOpen }: CartProps) => {
             {/* TOTAIS */}
             <div className="mt-6">
               <Card>
-                <CardContent className="space-y-2 p-5">
+                <CardContent className="space-y-2 p-4">
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-muted-foreground">
                       Subtotal
@@ -136,15 +136,19 @@ const Cart = ({ setIsOpen }: CartProps) => {
                   <Separator />
 
                   <div className="flex items-center justify-between text-xs font-semibold">
-                    <span className="text-xs text-muted-foreground">Total</span>
-                    <span>{formatCurrency(totalPrice)}</span>
+                    <span className="text-xs text-muted-foreground lg:text-sm">
+                      Total
+                    </span>
+                    <span className="lg:text-base">
+                      {formatCurrency(totalPrice)}
+                    </span>
                   </div>
                 </CardContent>
               </Card>
             </div>
             {/* FINALIZAR PEDIDO */}
             <Button
-              className="mt-6 w-full"
+              className="mb-6 mt-6 w-full"
               onClick={() => setIsComfirmDialogOpen(true)}
               disabled={isSubmitLoading}
             >

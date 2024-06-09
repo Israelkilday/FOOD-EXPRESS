@@ -30,8 +30,10 @@ const MyFavoriteRestaurants = async () => {
 
       <Separator />
 
-      <div className="px-5 py-6 md:px-24">
-        <h2 className=" mb-6 text-lg font-semibold">Restaurantes Favoritos</h2>
+      <div className="px-5 py-6 md:px-24 lg:pt-16">
+        <h2 className=" mb-6 text-lg font-semibold lg:text-xl">
+          Restaurantes Favoritos
+        </h2>
 
         <div className="flex min-w-full grid-cols-2 flex-col flex-wrap gap-6 md:grid lg:grid-cols-4">
           {userFavoriterestaurants.length > 0 ? (

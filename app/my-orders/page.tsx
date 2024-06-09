@@ -35,8 +35,8 @@ const MyOrdersPage = async () => {
 
       <Separator />
 
-      <div className="px-5 py-6 md:px-24">
-        <h2 className="pb-6 text-lg font-semibold">Meus Pedidos</h2>
+      <div className="px-5 py-6 md:px-24 lg:pt-16">
+        <h2 className="pb-6 text-lg font-semibold lg:text-xl">Meus Pedidos</h2>
 
         <div className="flex grid-cols-2 flex-col gap-3 md:grid lg:grid-cols-3 lg:gap-4">
           {orders.length > 0 ? (

@@ -16,7 +16,7 @@ const scrollToTop = () => {
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col pt-9 lg:pt-12">
+    <footer className="flex flex-col pt-9 lg:pt-16">
       <div className="flex w-full flex-col justify-between bg-primary px-5 pt-6 md:px-24 lg:flex-row lg:px-24 lg:pb-9 lg:pt-5">
         <div className="flex flex-col items-start justify-center gap-5 pb-1 md:justify-start lg:pt-5">
           <Link href="/">

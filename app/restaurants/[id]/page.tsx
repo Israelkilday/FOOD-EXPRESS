@@ -76,7 +76,7 @@ const RestaurantPage = async ({ params: { id } }: RestaurantPageProps) => {
         <Separator className="hidden lg:flex" />
       </div>
 
-      <div className="lg:flex lg:pl-24 lg:pt-12">
+      <div className="lg:flex lg:pl-24 lg:pt-16">
         <RestaurantImage
           restaurant={JSON.parse(JSON.stringify(restaurant))}
           userFavoriteRestaurants={userFavoriteRestaurants}

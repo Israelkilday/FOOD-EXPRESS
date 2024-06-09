@@ -37,8 +37,8 @@ const CartItem = ({ cartProduct }: CartContentItemProps) => {
           />
         </div>
 
-        <div className="space-y-1">
-          <h3 className="text-xs">{cartProduct.name}</h3>
+        <div className="space-y-1 lg:space-y-2">
+          <h3 className="text-xs lg:text-sm">{cartProduct.name}</h3>
 
           <div className="flex items-center gap-1">
             <h4 className="text-sm font-semibold">

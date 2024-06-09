@@ -38,10 +38,12 @@ const CategoriesPage = async ({ params: { id } }: CategoriesPageProps) => {
 
       <Separator />
 
-      <div className="px-5 py-6 md:px-24 ">
-        <h2 className=" mb-6 text-lg font-semibold">{category.name}</h2>
+      <div className="px-5 py-6 md:px-24 lg:pt-16 ">
+        <h2 className=" mb-6 text-lg font-semibold lg:text-xl">
+          {category.name}
+        </h2>
 
-        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-16">
           {category.products.map((product) => (
             <ProductItem
               key={product.id}

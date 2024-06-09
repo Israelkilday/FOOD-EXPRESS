@@ -42,8 +42,8 @@ const Restaurants = ({ userFavoriteRestaurants }: RestaurantProps) => {
 
       <Separator />
 
-      <div className="px-5 py-6 md:px-24">
-        <h2 className=" mb-6 text-lg font-semibold">
+      <div className="px-5 py-6 md:px-24 lg:pt-16">
+        <h2 className=" mb-6 text-lg font-semibold lg:text-xl">
           Restaurantes Encontrados
         </h2>
 

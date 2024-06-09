@@ -29,7 +29,7 @@ const ProductItem = ({ product, className }: ProductItemProps) => {
       )}
       href={`/products/${product.id}`}
     >
-      <div className="w-full space-y-2">
+      <div className="w-full space-y-2 lg:space-y-3">
         <div className="relative aspect-square w-full">
           <Image
             src={product.imageUrl}

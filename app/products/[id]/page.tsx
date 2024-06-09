@@ -41,7 +41,7 @@ const ProductPage = async ({ params: { id } }: ProductPageProps) => {
 
   return (
     <section>
-      <div className="hidden md:block lg:pb-12">
+      <div className="hidden md:block lg:pb-16">
         <Header haveSearchBar={true} />
 
         <Separator className="hidden lg:flex" />
