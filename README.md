@@ -13,7 +13,7 @@
 
 ## 🗺Jornada do Usuário no FOOD-EXPRESS:
 <div align="center">
-<img height="2000px" src="https://github.com/Israelkilday/FOOD-EXPRESS/assets/101229204/b5fbe000-0edf-410a-b61c-1b82f0352647"/> 
+<img src="https://github.com/Israelkilday/FOOD-EXPRESS/assets/101229204/b5fbe000-0edf-410a-b61c-1b82f0352647"/> 
 </div>
 
 ## 📊Diagrama Entidade-Relacionamento do Esquema Prisma:
