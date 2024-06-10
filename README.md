@@ -10,6 +10,17 @@
 
 ## 🎬Vídeo do projeto
 
+
+## 🗺Jornada do Usuário no FOOD-EXPRESS:
+<div align="center">
+<img height="2000px" src="https://github.com/Israelkilday/FOOD-EXPRESS/assets/101229204/b5fbe000-0edf-410a-b61c-1b82f0352647"/> 
+</div>
+
+## 📊Diagrama Entidade-Relacionamento do Esquema Prisma:
+<div align="center">
+<img src="https://github.com/Israelkilday/FOOD-EXPRESS/assets/101229204/5b32beb2-4997-4455-adcf-f313ac3848ce"/> 
+</div>
+
 ## ⚙️ Pré-requisitos
 
  - ***Next.js*** (v14.0.0 ou superior)
