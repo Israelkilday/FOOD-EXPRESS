@@ -11,12 +11,17 @@
 ## 🎬Vídeo do projeto
 
 
-## 🗺Jornada do Usuário no FOOD-EXPRESS:
+## fluxograma de Login:
 <div align="center">
-<img src="https://github.com/Israelkilday/FOOD-EXPRESS/assets/101229204/b5fbe000-0edf-410a-b61c-1b82f0352647"/> 
+<img src="https://github.com/Israelkilday/FOOD-EXPRESS/assets/101229204/5e2cd76e-60f0-4007-aeaf-7ce6e3bf4201"/> 
 </div>
 
-## 📊Diagrama Entidade-Relacionamento do Esquema Prisma:
+## fluxograma de Pedido:
+<div align="center">
+<img src="https://github.com/Israelkilday/FOOD-EXPRESS/assets/101229204/e0b18f16-6334-4a04-80d5-b25b536b3a84"/> 
+</div>
+
+## Diagrama Entidade-Relacionamento do Esquema Prisma:
 <div align="center">
 <img src="https://github.com/Israelkilday/FOOD-EXPRESS/assets/101229204/5b32beb2-4997-4455-adcf-f313ac3848ce"/> 
 </div>
