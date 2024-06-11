@@ -3,7 +3,8 @@
 <a name="readme-top"></a>
 
 <div align="center"><br>
- ***[FOOD-EXPRESS](https://food-express-ruddy.vercel.app/)*** Food-Express é um aplicativo de entrega de alimentos que oferece uma experiência completa tanto para os clientes quanto para os restaurantes. Inspirado nas funcionalidades do iFood. O sistema inclui uma interface de usuário moderna e intuitiva, um robusto sistema de carrinho de compras, autenticação segura e uma série de funcionalidades para melhorar a experiência do usuário e a gestão dos restaurantes.
+
+**_[FOOD-EXPRESS](https://food-express-ruddy.vercel.app/)_** Food-Express é um aplicativo de entrega de alimentos que oferece uma experiência completa tanto para os clientes quanto para os restaurantes. Inspirado nas funcionalidades do iFood. O sistema inclui uma interface de usuário moderna e intuitiva, um robusto sistema de carrinho de compras, autenticação segura e uma série de funcionalidades para melhorar a experiência do usuário e a gestão dos restaurantes.
 
  </div>
 
