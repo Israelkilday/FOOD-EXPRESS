@@ -4,19 +4,19 @@
 
 <div align="center"><br>
 
-**_[FOOD-EXPRESS](https://food-express-ruddy.vercel.app/)_** Food-Express é um aplicativo de entrega de alimentos que oferece uma experiência completa tanto para os clientes quanto para os restaurantes. Inspirado nas funcionalidades do iFood. O sistema inclui uma interface de usuário moderna e intuitiva, um robusto sistema de carrinho de compras, autenticação segura e uma série de funcionalidades para melhorar a experiência do usuário e a gestão dos restaurantes.
+**_[FOOD-EXPRESS](https://food-express-rudd.vercel.app/)_** Food-Express é um aplicativo de entrega de alimentos que oferece uma experiência completa tanto para os clientes quanto para os restaurantes. Inspirado nas funcionalidades do iFood. O sistema inclui uma interface de usuário moderna e intuitiva, um robusto sistema de carrinho de compras, autenticação segura e uma série de funcionalidades para melhorar a experiência do usuário e a gestão dos restaurantes.
 
  </div>
 
 ## 🎬Vídeo do projeto
 
-## fluxograma de Login:
+## Fluxograma de Login:
 
 <div align="center">
 <img src="https://github.com/Israelkilday/FOOD-EXPRESS/assets/101229204/5e2cd76e-60f0-4007-aeaf-7ce6e3bf4201"/> 
 </div>
 
-## fluxograma de Pedido:
+## Fluxograma de Pedido:
 
 <div align="center">
 <img src="https://github.com/Israelkilday/FOOD-EXPRESS/assets/101229204/e0b18f16-6334-4a04-80d5-b25b536b3a84"/> 
@@ -69,6 +69,9 @@
 - **_[Prisma ORM](https://www.prisma.io/?via=start&gad_source=1)_**
 - **_[PostgresSQL](https://www.postgresql.org/)_**
 - **_[Vercel](https://vercel.com/docs)_**
+- **_[Husky](https://www.freecodecamp.org/portuguese/news/como-adicionar-hooks-de-commit-ao-git-com-husky-para-automatizar-tarefas/)_**
+- **_[ESLint](https://eslint.org/)_**
+- **_[Prettier](https://prettier.io/)_**
 - **_[Git](https://www.git-scm.com/)_**
 
 ## 💻 Como Rodar o Projeto
@@ -136,7 +139,7 @@ Se você deseja contribuir com este projeto, siga estas etapas:
 
 ## 🔗 Link do Projeto
 
-https://food-express-ruddy.vercel.app/
+https://food-express-rudd.vercel.app/
 
 ## 🧠 Autor
 
