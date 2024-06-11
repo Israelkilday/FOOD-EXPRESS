@@ -27,7 +27,6 @@ const CartItem = ({ cartProduct }: CartContentItemProps) => {
   return (
     <div className="flex items-center justify-between">
       <div className="flex items-center gap-4">
-        {/* IMAGEM E INFO */}
         <div className="relative h-20 w-20">
           <Image
             src={cartProduct.imageUrl}
@@ -56,7 +55,6 @@ const CartItem = ({ cartProduct }: CartContentItemProps) => {
             )}
           </div>
 
-          {/* QUANTIDADE */}
           <div className="flex items-center text-center">
             <Button
               size="icon"
@@ -79,7 +77,6 @@ const CartItem = ({ cartProduct }: CartContentItemProps) => {
         </div>
       </div>
 
-      {/* BOTÃO DE DELETAR */}
       <Button
         size="icon"
         variant="ghost"
