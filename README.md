@@ -4,7 +4,7 @@
 
 <div align="center"><br>
 
-**_[FOOD-EXPRESS](https://food-express-rudd.vercel.app/)_** Food-Express é um aplicativo de entrega de alimentos que oferece uma experiência completa tanto para os clientes quanto para os restaurantes. Inspirado nas funcionalidades do iFood. O sistema inclui uma interface de usuário moderna e intuitiva, um robusto sistema de carrinho de compras, autenticação segura e uma série de funcionalidades para melhorar a experiência do usuário e a gestão dos restaurantes.
+**_[FOOD-EXPRESS](https://food-express-isarel-kildays-projects.vercel.app/)_** Food-Express é um aplicativo de entrega de alimentos que oferece uma experiência completa tanto para os clientes quanto para os restaurantes. Inspirado nas funcionalidades do iFood. O sistema inclui uma interface de usuário moderna e intuitiva, um robusto sistema de carrinho de compras, autenticação segura e uma série de funcionalidades para melhorar a experiência do usuário e a gestão dos restaurantes.
 
  </div>
 
@@ -139,7 +139,7 @@ Se você deseja contribuir com este projeto, siga estas etapas:
 
 ## 🔗 Link do Projeto
 
-https://food-express-rudd.vercel.app/
+https://food-express-isarel-kildays-projects.vercel.app/
 
 ## 🧠 Autor
 
