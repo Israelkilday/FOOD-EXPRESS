@@ -46,7 +46,7 @@ https://github.com/Israelkilday/FOOD-EXPRESS/assets/101229204/7ed22cbb-594b-4150
 - [x] **_Sistema de autenticação com o `NextAuth` integrado ao `Google`_**
 - Integração simplificada de login utilizando serviço de autenticação `OAuth` do Google.
 - [x] **_Armazenamento de dados._**
-- Integração simplificada com o Banco de Dados `PostgreSQL` atravéz do `Prisma ORM` e `Supabase`.
+- Integração simplificada com o Banco de Dados `PostgreSQL` atravéz do `Prisma ORM`.
 - [x] **_Visualização do histórico de pedidos._**
 - [x] **_Acompanhamento em tempo real do status do pedido._**
 - [x] **_Gerenciamento de restaurantes favoritos._**
