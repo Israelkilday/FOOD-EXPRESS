@@ -8,7 +8,7 @@
 
  </div>
 
-## 🎬Vídeo do projeto
+## 🎬 Vídeo do projeto
 
 https://github.com/Israelkilday/FOOD-EXPRESS/assets/101229204/7ed22cbb-594b-4150-95d2-96867a48a2e9
 
@@ -110,7 +110,7 @@ npm run db:seed
 - `/app`: Código-fonte da aplicação.
 - `/public`: Arquivos públicos.
 
-## 🤝Contribuição
+## 🤝 Contribuição
 
 Se você deseja contribuir com este projeto, siga estas etapas:
 
