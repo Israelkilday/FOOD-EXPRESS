@@ -51,7 +51,7 @@ https://github.com/Israelkilday/FOOD-EXPRESS/assets/101229204/7ed22cbb-594b-4150
 - [x] **_Acompanhamento em tempo real do status do pedido._**
 - [x] **_Gerenciamento de restaurantes favoritos._**
 - [x] **_Navegação por categorias de alimentos._**
-- [x] **_Pesquisa de restaurantes pelo nome_**
+- [x] **_Pesquisa de restaurantes pelo nome._**
 
   ## 🛠️ Principais Tecnologias
 
