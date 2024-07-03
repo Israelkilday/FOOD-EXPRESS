@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { db } from "../../_lib/prisma";
-// import ProductImage from "./_components/product-image";
 import ProductDetails from "./_components/product-details";
 import Header from "@/app/_components/header";
 import { Separator } from "@/app/_components/ui/separator";

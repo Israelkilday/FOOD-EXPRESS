@@ -155,7 +155,6 @@ const SideMenu = () => {
           className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
           asChild
         >
-          {/* <Link href="/categories/df818735-ffb5-494d-bdb8-5640d7ae5721/products"> */}
           <Link href="/categories/e78fdd67-163c-4d3c-a9de-57f402eaeff7/products">
             <Pizza size={16} />
             <span className="block">Pizzas</span>
@@ -166,7 +165,6 @@ const SideMenu = () => {
           className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
           asChild
         >
-          {/* <Link href="/categories/d754303a-50fe-4ad3-b787-0aae10455c65/products"> */}
           <Link href="/categories/03894850-dc3c-4682-a55c-44188fae1751/products">
             <Salad size={16} />
             <span className="block">Brasileira</span>
