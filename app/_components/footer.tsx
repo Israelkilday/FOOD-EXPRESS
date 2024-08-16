@@ -148,8 +148,22 @@ const Footer = () => {
         <Separator className="mb-6" />
         <div className="flex justify-between lg:flex-row">
           <div className="flex flex-col text-start text-sm text-white md:flex-row lg:flex-row lg:text-base">
-            <span className="mr-1">© 2024 ISRAEL KILDAY</span>
+            <span className="mr-1">© 2024 FOOD EXPRESS</span>
             <p>- Todos os direitos reservados </p>
+
+            <p className="text-sm font-bold text-gray-400 md:text-base">
+              <a
+                href="https://portfolioikdev-zeta-nine.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Desenvolvido por: &lt;/
+                <span className="brand tracking-widest text-white duration-150 hover:text-yellow-400">
+                  Israel Kilday
+                </span>
+                &gt;
+              </a>
+            </p>
           </div>
 
           <button
