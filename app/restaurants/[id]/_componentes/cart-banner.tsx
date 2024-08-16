@@ -29,9 +29,8 @@ const CartBanner = ({ restaurant }: CartBannerProps) => {
   if (!restaurantHasProductsOnCart) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 z-50 w-full border-t border-solid border-muted-foreground bg-white p-5 pt-3 shadow-md">
+    <div className="fixed bottom-0 left-0 z-50 w-full border-t border-solid border-muted-foreground bg-white p-5 pt-3 shadow-md lg:px-24">
       <div className="flex items-center justify-between">
-        {/* PREÇO */}
         <div>
           <span className="text-xs text-muted-foreground">
             Total Sem Entrega
@@ -45,7 +44,6 @@ const CartBanner = ({ restaurant }: CartBannerProps) => {
           </h3>
         </div>
 
-        {/* BOTÃO */}
         <Button onClick={() => setIsCartOpen(true)}>Ver Sacola</Button>
 
         <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
