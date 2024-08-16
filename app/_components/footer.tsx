@@ -151,7 +151,7 @@ const Footer = () => {
             <span className="mr-1">© 2024 FOOD EXPRESS</span>
             <p>- Todos os direitos reservados </p>
 
-            <p className="text-sm font-bold text-gray-400 md:text-base">
+            <p className="text-sm font-bold text-white md:text-base">
               <a
                 href="https://portfolioikdev-zeta-nine.vercel.app/"
                 target="_blank"
