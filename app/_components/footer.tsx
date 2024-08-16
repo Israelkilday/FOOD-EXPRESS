@@ -144,14 +144,14 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-col bg-primary px-5 pb-5 pt-0 md:px-24">
+      <div className="flex flex-col bg-primary px-5 pb-4 pt-0 md:px-24">
         <Separator className="mb-6" />
         <div className="flex flex-row justify-between">
           <div className="lg: flex flex-col gap-5 text-start text-sm text-white lg:flex-row lg:text-base">
             <span className="mr-1">© 2024 FOOD EXPRESS</span>
             <p>Todos os direitos reservados </p>
 
-            <p className="text-sm font-bold text-white md:text-base">
+            <p className="text-sm text-white md:text-base">
               Desenvolvido por:
               <a
                 href="https://portfolioikdev-zeta-nine.vercel.app/"
