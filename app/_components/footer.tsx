@@ -147,17 +147,18 @@ const Footer = () => {
       <div className="flex flex-col bg-primary px-5 pb-5 pt-0 md:px-24">
         <Separator className="mb-6" />
         <div className="flex justify-between lg:flex-row">
-          <div className="flex flex-col text-start text-sm text-white lg:gap-5 lg:text-base">
+          <div className="flex flex-col text-start text-sm text-white lg:text-base">
             <span className="mr-1">© 2024 FOOD EXPRESS</span>
             <p>Todos os direitos reservados </p>
 
             <p className="text-sm font-bold text-white md:text-base">
+              Desenvolvido por:
               <a
                 href="https://portfolioikdev-zeta-nine.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Desenvolvido por: &lt;/
+                &lt;/
                 <span className="brand tracking-widest text-white duration-150 hover:text-yellow-400">
                   Israel Kilday
                 </span>
