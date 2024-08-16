@@ -160,7 +160,13 @@ const ProductDetails = ({
                   <h3 className="pb-2 font-semibold lg:text-lg">Sobre</h3>
                   <Separator className="mb-2" />
                   <p className="text-sm text-muted-foreground">
-                    {product.description}
+                    {/* {product.description} */}
+                    Com o Food Express, explore a diversidade em um só lugar!
+                    Nosso sistema de delivery conecta você aos melhores
+                    restaurantes, oferecendo pizzas, hambúrgueres, bebidas,
+                    comidas japonesas e pratos tradicionais. Com praticidade e
+                    variedade, garantimos uma experiência gastronômica completa
+                    para todos os gostos, direto na sua casa.
                   </p>
                 </div>
 
