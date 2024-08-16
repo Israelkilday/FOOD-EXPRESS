@@ -144,15 +144,15 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-col bg-primary px-5 pb-4 pt-0 md:px-24">
+      <div className="flex flex-col bg-primary px-5 pb-5 pt-0 md:px-24 lg:pb-4">
         <Separator className="mb-6 lg:mb-7" />
         <div className="flex flex-row justify-between">
           <div className="lg: flex flex-col text-start text-sm text-white lg:flex-row lg:gap-5 lg:text-base">
             <span className="mr-1">© 2024 FOOD EXPRESS</span>
             <p>Todos os direitos reservados </p>
 
-            <p className="text-sm text-white md:text-base">
-              Desenvolvido por:
+            <p className="text-sm text-white lg:text-base">
+              Desenvolvido por:&nbsp;
               <a
                 href="https://portfolioikdev-zeta-nine.vercel.app/"
                 target="_blank"
@@ -167,12 +167,14 @@ const Footer = () => {
             </p>
           </div>
 
-          <button
-            onClick={scrollToTop}
-            className="animate-bounce rounded-full border border-white p-2 outline-none"
-          >
-            <ArrowUp className="text-white" />
-          </button>
+          <div className="pt-5 lg:pt-0">
+            <button
+              onClick={scrollToTop}
+              className="animate-bounce rounded-full border border-white p-2 outline-none"
+            >
+              <ArrowUp className="text-white duration-150 hover:text-yellow-400" />
+            </button>
+          </div>
         </div>
       </div>
     </footer>
