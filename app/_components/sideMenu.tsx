@@ -132,7 +132,6 @@ const SideMenu = () => {
           className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
           asChild
         >
-          {/* <Link href="/categories/a9fdde66-2464-411a-b711-3ea4bd47816a/products"> */}
           <Link href="/categories/1eac715b-64a0-495a-a2c2-91ab5ce162c6/products">
             <Fish size={16} />
             <span className="block">Japonesa</span>
@@ -143,7 +142,6 @@ const SideMenu = () => {
           className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
           asChild
         >
-          {/* <Link href="/categories/2f18dd53-e1cd-4abf-82a1-e24814806734/products"> */}
           <Link href="/categories/e6d5d58d-5a4b-44b3-a420-96c1e14afb95/products">
             <CupSoda size={16} />
             <span className="block">Sucos</span>
@@ -176,8 +174,11 @@ const SideMenu = () => {
       </div>
 
       {data?.user && (
-        <Button className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white">
-          <LogOutIcon size={16} onClick={handleSignOutClick} />
+        <Button
+          onClick={handleSignOutClick}
+          className="w-full justify-start space-x-3 rounded-full bg-transparent text-sm text-foreground hover:bg-primary hover:text-white"
+        >
+          <LogOutIcon size={16} />
           <span className="block">Sair da Conta</span>
         </Button>
       )}
