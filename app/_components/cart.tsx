@@ -163,7 +163,7 @@ const Cart = ({ setIsOpen }: CartProps) => {
         open={isComfirmDialogOpen}
         onOpenChange={setIsComfirmDialogOpen}
       >
-        <AlertDialogContent>
+        <AlertDialogContent className="w-[90%]">
           <AlertDialogHeader>
             <AlertDialogTitle>Deseja finalizar seu pedido?</AlertDialogTitle>
             <AlertDialogDescription>

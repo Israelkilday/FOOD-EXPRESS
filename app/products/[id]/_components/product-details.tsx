@@ -203,7 +203,7 @@ const ProductDetails = ({
         open={isComfirmationDialogOpen}
         onOpenChange={setIsComfirmationDialogOpen}
       >
-        <AlertDialogContent>
+        <AlertDialogContent className="w-[90%]">
           <AlertDialogHeader>
             <AlertDialogTitle>
               Voçe só pode adicionar items de um restaurante por vez.
