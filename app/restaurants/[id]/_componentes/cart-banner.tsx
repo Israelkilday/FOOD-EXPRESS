@@ -29,16 +29,16 @@ const CartBanner = ({ restaurant }: CartBannerProps) => {
   if (!restaurantHasProductsOnCart) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 z-50 w-full border-t border-solid border-muted-foreground bg-white p-5 pt-3 shadow-md lg:px-24">
+    <div className="fixed bottom-0 left-0 z-50 w-full border-t border-solid border-muted-foreground bg-white p-5 pt-3 shadow-md md:px-24">
       <div className="flex items-center justify-between">
         <div>
-          <span className="text-xs text-muted-foreground">
+          <span className="text-xs text-muted-foreground lg:text-base">
             Total Sem Entrega
           </span>
 
           <h3 className="font-semibold">
             {formatCurrency(totalPrice)}{" "}
-            <span className="text-xs font-normal text-muted-foreground">
+            <span className="text-xs font-normal text-muted-foreground lg:text-base">
               {""}/ {totalQuantity} {totalQuantity > 1 ? "Items" : "Item"}
             </span>
           </h3>
