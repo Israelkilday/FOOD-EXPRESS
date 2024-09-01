@@ -145,7 +145,7 @@ const Cart = ({ setIsOpen }: CartProps) => {
                 </CardContent>
               </Card>
             </div>
-            {/* FINALIZAR PEDIDO */}
+
             <Button
               className="mb-6 mt-6 w-full"
               onClick={() => setIsComfirmDialogOpen(true)}
