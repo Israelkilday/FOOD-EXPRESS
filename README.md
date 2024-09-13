@@ -23,7 +23,9 @@ https://github.com/Israelkilday/FOOD-EXPRESS/assets/101229204/7ed22cbb-594b-4150
 ## Fluxograma de Pedido:
 
 <div align="center">
-<img src="https://github.com/Israelkilday/FOOD-EXPRESS/assets/101229204/e0b18f16-6334-4a04-80d5-b25b536b3a84"/> 
+
+ ![fluxograma de pedido food express drawio](https://github.com/user-attachments/assets/c4bfc398-6834-4529-a2c5-47eb4fd72242)
+ 
 </div>
 
 ## Diagrama Entidade-Relacionamento do Esquema Prisma:
